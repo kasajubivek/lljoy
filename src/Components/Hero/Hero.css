@@ -1,0 +1,133 @@
+.hero{
+    position: relative;
+    width:100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(122, 122, 122, 0.1),rgba(122, 122, 122, 0.1)),url('../../assets/windsor.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    /* justify-content: left; */
+}
+
+.hero-text {
+    text-align: center;
+    max-width: 800px;
+    top: -90px;
+    height: 100%; 
+}
+
+.hero-text-two{
+    text-align: center;
+    max-width: 800px;
+    top: -90px;
+    height: 100%; 
+}
+
+.hero-text h1{
+    font-size: 60px;
+    font-weight: 450;
+    display: inline-block;
+    width: 152%;
+    text-align: left; 
+    background-color: rgb(156, 153, 153);
+    /* max-width: 200px; */
+}
+
+.innerh1{
+    font-size: 60px;
+    font-weight: 450;
+    display: inline-block;
+    width: 152%;
+    text-align: left; 
+    color: white;
+    background-color: rgb(218, 217, 217);
+    display: inline-block;
+    border-right: 5px solid;
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    color:rgb(5, 54, 63);
+    animation: typing 2s steps(13),
+                cursor .4s step-end infinite alternate;
+    /* max-width: 200px; */
+}
+
+.google h1, .rating span{
+
+    animation: scaleAnimation 1s infinite alternate; /* Add animation */
+}
+
+@keyframes scaleAnimation {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes cursor {
+    50% { border-color: transparent}
+}
+
+@keyframes typing {
+    from {width: 0;}
+}
+
+.hero-text h3{
+    /* font-size: 18px; */
+    font-weight: 400;
+    display: inline-block;
+    width: 80%;
+    text-align: left; 
+     margin: 10px auto 20px;
+    /* max-width: 200px; */
+}
+
+
+.btnHero{
+    background: #ffffff;
+    color: #000000;
+    padding: 20px 25px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .btnHero img{
+    width: 20px;
+    margin-left: 10px;
+  }
+
+  .btnHero:hover {
+    background-color: #cfcfcf; /* Change to your desired hover background color */
+  }
+
+
+  .google {
+    position: absolute; /* Add this line */
+    bottom: 0; /* Add this line */
+    right: 0; /* Add this line */
+    text-align: right;
+    font-size: 28px;
+    bottom: 40px; /* Add some bottom margin */
+    right: 200px; 
+}
+
+  .google h1 {
+    font-size: 50px;
+    font-weight: 450;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    /* margin-bottom: 20px; */
+}
+
+.rating {
+    text-align: right;
+    font-size: 28px;
+}
