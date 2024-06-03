@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import { delay, motion } from "framer-motion";
 import './Hero.css'
 import dark_arrow from '../../assets/arrow.png'
 
 const Hero = () => {
+
+  const animationProps = {
+    initial: { opacity: 0, y: 100 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 1, delay: 0 }
+};
   
   return (
     <div className='hero container'>
         <div className='hero-text'>
-            <h1>A WINDSOR CRIMINAL DEFENSE LAWYER</h1><h2 className='innerh1'>WHO WILL FIGHT FOR YOU</h2>
+            <motion.h1>A WINDSOR CRIMINAL DEFENSE LAWYER</motion.h1><motion.h2 {...animationProps} className='innerh1'>WHO WILL FIGHT FOR YOU</motion.h2>
             {/* <h3>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</h3>
             <button className='btnHero'>Explore <img src = {dark_arrow}/></button> */}
             <div className='hero-text-two'>
-              < h3>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</h3>
-              <button className='btnHero'>Contact Us Now<img src = {dark_arrow}/></button>
+              <motion.h3 {...animationProps} transition = {{ delay: 4 }}>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</motion.h3>
+              <motion.button {...animationProps} transition = {{ delay: 5 }} className='btnHero'>Contact Us Now<img src = {dark_arrow}/></motion.button>
             </div>
         </div>
         <div className='google'>

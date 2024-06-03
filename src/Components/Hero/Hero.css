@@ -39,17 +39,17 @@
     font-size: 60px;
     font-weight: 450;
     display: inline-block;
-    width: 152%;
+    /* width: 152%; */
     text-align: left; 
     color: white;
     background-color: rgb(218, 217, 217);
     display: inline-block;
     border-right: 5px solid;
-    width: 95%;
+    width: 0;
     white-space: nowrap;
     overflow: hidden;
     color:rgb(5, 54, 63);
-    animation: typing 2s steps(13),
+    animation: typing 2s steps(13) 2s forwards,
                 cursor .4s step-end infinite alternate;
     /* max-width: 200px; */
 }
@@ -69,7 +69,8 @@
 }
 
 @keyframes typing {
-    from {width: 0;}
+    0% { width: 0; }
+    100% { width: 100%; }
 }
 
 .hero-text h3{
