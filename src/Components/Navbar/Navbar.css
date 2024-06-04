@@ -14,7 +14,7 @@ nav{
 
 
 .logo{
-    width: 180px;
+    width:14vh
 }
 
 
@@ -31,6 +31,11 @@ li:hover {
   }
 
 
+ 
+
   .btn:hover {
-    background-color: #144853; /* Change to your desired hover background color */
+    background-color: #2a6674;
+    border-color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }

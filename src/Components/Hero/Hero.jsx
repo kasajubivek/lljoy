@@ -8,18 +8,18 @@ const Hero = () => {
   const animationProps = {
     initial: { opacity: 0, y: 100 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 1, delay: 0 }
+    transition: { duration: 0, delay: 0 }
 };
   
   return (
     <div className='hero container'>
         <div className='hero-text'>
-            <motion.h1>A WINDSOR CRIMINAL DEFENSE LAWYER</motion.h1><motion.h2 {...animationProps} className='innerh1'>WHO WILL FIGHT FOR YOU</motion.h2>
+            <motion.h1 {...animationProps} transition = {{ duration: 1 }}>A WINDSOR CRIMINAL DEFENSE LAWYER</motion.h1><motion.h2 {...animationProps} className='innerh1'>WHO WILL FIGHT FOR YOU</motion.h2>
             {/* <h3>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</h3>
             <button className='btnHero'>Explore <img src = {dark_arrow}/></button> */}
             <div className='hero-text-two'>
-              <motion.h3 {...animationProps} transition = {{ delay: 4 }}>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</motion.h3>
-              <motion.button {...animationProps} transition = {{ delay: 5 }} className='btnHero'>Contact Us Now<img src = {dark_arrow}/></motion.button>
+              <motion.h3 {...animationProps} transition = {{ delay: 2 }}>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</motion.h3>
+              <motion.button {...animationProps} transition = {{ delay: 3 }} className='btnHero'>Contact Us Now<img src = {dark_arrow}/></motion.button>
             </div>
         </div>
         <div className='google'>
