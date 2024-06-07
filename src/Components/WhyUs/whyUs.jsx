@@ -10,7 +10,7 @@ const whyUs = () => {
   return (
     <div className='whyUs'>
         <div className='content'>
-            <img src={grey} />
+            {/* <img src={grey} /> */}
             <div className="caption">
                 <img src={rating} />
                 <h1>Proven Expertise</h1>

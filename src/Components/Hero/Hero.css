@@ -2,7 +2,7 @@
     position: relative;
     width:100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(122, 122, 122, 0.1),rgba(122, 122, 122, 0.1)),url('../../assets/windsor.jpg');
+    background: linear-gradient(rgba(122, 122, 122, 0.1),rgba(122, 122, 122, 0.1)),url('../../assets/bridge1.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -34,7 +34,7 @@
     display: inline-block;
     width: 152%;
     text-align: left; 
-    background-color: rgb(156, 153, 153);
+    background-color: rgba(156, 153, 153, 0.7);
     /* max-width: 200px; */
 }
 
@@ -43,7 +43,8 @@
     font-weight: 450;
     display: inline-block;
     text-align: left; 
-    background-color: rgb(218, 217, 217);
+    /* background-color: rgb(218, 217, 217); */
+    background-color: rgba(218, 217, 217, 0.7);
     display: inline-block;
     border-right: 5px solid;
     white-space: nowrap;

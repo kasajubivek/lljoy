@@ -1,15 +1,18 @@
+
+
 .title{
     text-align: center;
     /* color: #212EA0; */
-    font-size: 20px;
-    font-weight: 600;
-    /* text-transform: uppercase; */
-    margin: 70px 0 30px;
+    font-size: 70px;
+    text-transform: uppercase;
+    /* margin: 70px 0 30px; */
+    /* background-color: rgba(68, 147, 150, 0.3); */
+    /* border: 2px solid #000; */
 }
 
 .title h1{
-    color: #48a3b7;
-    margin-top: 5px;
+    color: #000000;
+    /* margin-top: 5px; */
     text-transform: none;
     font-weight: 300;
 }
