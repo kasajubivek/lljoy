@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './about.css'
-import laura from '../../assets/fakelawyer.jpg'
+import laura from '../../assets/cartoonlawyer2.jpg'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
