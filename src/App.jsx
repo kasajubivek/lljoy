@@ -15,7 +15,7 @@ const App = () => {
       <Navbar/>
       <Hero/>
       <div className='container'>
-        <Title title='KNOW LAURA JOY LAW'/>
+        <Title title='Experience Matters'/>
         <About/>
         <Card/>
         {/* <WhyUs/> */}
