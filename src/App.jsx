@@ -7,6 +7,9 @@ import About from './Components/About/about'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Card from './Components/Card/card'
+import Testimonials from './Components/Testimonials/testimonials'
+import Contact from './Components/Contact/contact'
+
 
 const App = () => {
 
@@ -15,9 +18,11 @@ const App = () => {
       <Navbar/>
       <Hero/>
       <div className='container'>
-        <Title title='Experience Matters'/>
+        {/* <Title title='Experience Matters'/> */}
         <About/>
         <Card/>
+        <Testimonials/>
+        <Contact/>
         {/* <WhyUs/> */}
       </div>
     </div>

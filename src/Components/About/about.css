@@ -4,7 +4,8 @@
  
     /* justify-content: space-between; */
     width: 70%;
-    /* background-color: rgba(60, 178, 194, 0.6); */
+    /* background-color: rgba(60, 178, 194, 0.2); */
+    /* height:70vh  */
 }
 
 .about-left{
@@ -28,7 +29,7 @@
     font-size: 35px;
     margin: 10px 0;
     max-width: 400px;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .about h3{
@@ -36,5 +37,33 @@
     color: black;
     margin-bottom: 15px;
     font-weight: 300;
+    font-size: 20px;
 }
 
+
+.learnMoreBtn{
+      /* background: #bfbfbf;
+  color: #000000; */
+  background: #1d1d1d;
+  /* background: #48a3b7; */
+  color: white;
+  margin: 15px 0px;
+  padding: 16px 25px;
+  font-size: 18px;
+  /* border-radius: 30px; */
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  /* display: inline-flex; */
+  /* align-items: center;
+  justify-content: center; */
+  border-color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.learnMoreBtn:hover {
+    background-color: #2a6674;
+    border-color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }

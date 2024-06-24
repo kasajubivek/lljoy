@@ -23,7 +23,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(102, 175, 194, 0.1);
+    /* background-color: rgba(102, 175, 194, 0.1); */
 }
 
 .cardContainer h1{

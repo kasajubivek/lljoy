@@ -34,11 +34,12 @@ a{
 .btn{
   /* background: #bfbfbf;
   color: #000000; */
-  background: #48a3b7;
+  background: #1d1d1d;
+  /* background: #48a3b7; */
   color: white;
   padding: 14px 25px;
   font-size: 16px;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   cursor: pointer;
   border: 0;
   outline: 0;
