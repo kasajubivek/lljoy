@@ -44,7 +44,8 @@
 .learnMoreBtn{
       /* background: #bfbfbf;
   color: #000000; */
-  background: #1d1d1d;
+  background: var(--primaryColor);
+  /* background: #1d1d1d; */
   /* background: #48a3b7; */
   color: white;
   margin: 15px 0px;

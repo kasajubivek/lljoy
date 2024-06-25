@@ -9,6 +9,7 @@ import 'aos/dist/aos.css'
 import Card from './Components/Card/card'
 import Testimonials from './Components/Testimonials/testimonials'
 import Contact from './Components/Contact/contact'
+import ContactUs from './Components/ContactUs/contactUs'
 
 
 const App = () => {
@@ -22,7 +23,7 @@ const App = () => {
         <About/>
         <Card/>
         <Testimonials/>
-        <Contact/>
+        <ContactUs/>
         {/* <WhyUs/> */}
       </div>
     </div>

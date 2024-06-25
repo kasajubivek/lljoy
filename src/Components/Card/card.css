@@ -51,7 +51,7 @@ section{
     margin-bottom: 20px;
     transition: .3s;
     border: 2px solid transparent;
-    border-bottom: 2px solid #08052b;
+    /* border-bottom: 2px solid #08052b; */
    /* word-wrap: break-word;  Ensures that long words will break and wrap onto the next line if they exceed the width of their container.s */
     word-break: break-word; /* Similar to word-wrap, this property forces long words to break and wrap to the next line. */
     /* overflow-wrap: break-word; This property is a more modern approach to handle word wrapping. It ensures that words will break if necessary to prevent overflow. */
@@ -90,7 +90,7 @@ section{
 }
 
 .read-more a {
-    color: rgb(177, 34, 9); /* Customize link color */
+    color: var(--primaryColor); /* Customize link color */
     text-decoration: none; /* Remove default underline */
     font-weight: bold; /* Make text bold */
     transition: color 0.3s ease;

@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css'
+import SwiperCore, { Pagination } from 'swiper'
+import 'swiper/css/pagination';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import 'swiper/css';
@@ -8,6 +11,8 @@ import './testimonials.css';
 import img1 from '../../assets/pic-2.jpeg'
 import img2 from '../../assets/user-2.png'
 import img3 from '../../assets/user-3.png'
+
+SwiperCore.use([Pagination]);
 
 const Testimonials = () => {
 
@@ -21,13 +26,14 @@ const Testimonials = () => {
     <div className="section__container">
       <div className="header">
         <p data-aos="fade-right">TESTIMONIALS</p>
-        <h1 data-aos="fade-left">What our clients say about us.</h1>
+        <h1 data-aos="fade-left">What our <span style={{color: 'var(--primaryColor)'}}>clients</span> say about us.</h1>
       </div>
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
+        pagination={{ clickable: true }}
       >
         <SwiperSlide>
           <div className="card" data-aos="zoom-in">
@@ -63,8 +69,8 @@ const Testimonials = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="footer">
-        <h4>Your Success is Our Priority.</h4>
+      <div className="footer" data-aos="zoom-in">
+        <h4>Your Success is <span style={{color: 'var(--primaryColor)'}}>Our Priority.</span></h4>
         <p>
         We are committed to providing effective solutions tailored to your legal needs.
         </p>

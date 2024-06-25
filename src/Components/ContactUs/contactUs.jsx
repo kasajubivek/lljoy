@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './contact.css';
+import './contactUs.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faAddressCard, faEnvelope, faInbox } from '@fortawesome/free-solid-svg-icons';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import bkgImg from '../../assets/img.jpg'
 
-const Contact = () => {
+const contactUs = () => {
     const [inputs, setInputs] = useState({
         firstName: '',
         lastName: '',
@@ -47,10 +46,9 @@ const Contact = () => {
     };
 
     return (
-        <main>
-            <section className='contact'>
-                <div className='contactContainer'>
-                    <div className="left" data-aos="fade-right">
+        <div className="two-column-container">
+          <div className="left-column">
+          <div className="left" data-aos="fade-right">
                         <div className="form-wrapper">
                             <div className="contact-heading">
                                 <h1>Contact Us <span>Now!</span></h1>
@@ -125,7 +123,9 @@ const Contact = () => {
                             </form>
                         </div>
                     </div>
-                    <div className="right" data-aos="fade-left">
+          </div>
+          <div className="right-column">
+          <div className="right" data-aos="fade-left">
                         <div className="image-wrapper">
                             <div className="contactImage">
                             <iframe
@@ -138,10 +138,9 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </main>
-    );
-};
+          </div>
+        </div>
+      );
+}
 
-export default Contact;
+export default contactUs
