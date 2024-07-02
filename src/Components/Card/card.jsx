@@ -54,7 +54,7 @@ const Card = () => {
         <div>
             <section>
                 <div className="cardContainer">
-                    <h1 style={{ fontWeight: 550}}>Our <span style={{color: 'var(--primaryColor)'}}>Practice Areas</span></h1>
+                    <h1 style={{ fontFamily: '"Noto Serif", serif', fontWeight: 550}}>Our <span style={{color: 'var(--primaryColor)'}}>Practice Areas</span></h1>
                     <div className="cards">
                         {
                             cards.map((card, i) => (

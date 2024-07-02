@@ -128,6 +128,9 @@ const contactUs = () => {
           <div className="right" data-aos="fade-left">
                         <div className="image-wrapper">
                             <div className="contactImage">
+                            <div className="map-heading">
+                                <h2>Laura Joy Law, <span >Office Location</span></h2>
+                            </div>  
                             <iframe
                             src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d94431.17549308222!2d-83.10994106853069!3d42.30041520496183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x883b2d1fc0a71c95%3A0x38964b77418b811d!2s1500%20Ouellette%20Ave%20Suite%20101%2C%20Windsor%2C%20ON%20N8X%201K7!3m2!1d42.3004447!2d-83.0275403!5e0!3m2!1sen!2sca!4v1719332480484!5m2!1sen!2sca"
                             className='location'

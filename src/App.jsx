@@ -10,6 +10,9 @@ import Card from './Components/Card/card'
 import Testimonials from './Components/Testimonials/testimonials'
 import Contact from './Components/Contact/contact'
 import ContactUs from './Components/ContactUs/contactUs'
+import Footer from './Components/Footer/footer'
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 
 const App = () => {
@@ -25,6 +28,7 @@ const App = () => {
         <Testimonials/>
         <ContactUs/>
         {/* <WhyUs/> */}
+        <Footer/>
       </div>
     </div>
   )
