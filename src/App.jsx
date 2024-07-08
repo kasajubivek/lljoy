@@ -12,6 +12,8 @@ import Contact from './Components/Contact/contact'
 import ContactUs from './Components/ContactUs/contactUs'
 import Footer from './Components/Footer/footer'
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import PractiseAreas from './Components/PractiseAreas/practiseAreas'
+import Media from './Components/Media/media'
 
 
 
@@ -24,7 +26,9 @@ const App = () => {
       <div className='container'>
         {/* <Title title='Experience Matters'/> */}
         <About/>
-        <Card/>
+        {/* <Card/> */}
+        <PractiseAreas/>
+        <Media/>
         <Testimonials/>
         <ContactUs/>
         {/* <WhyUs/> */}

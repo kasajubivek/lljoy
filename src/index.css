@@ -15,12 +15,17 @@
   box-sizing: border-box;
   /* font-family: "Outfit", sans-serif; */
   font-family: 'DM Sans', sans-serif;
+  /* background-color: white; */
 }
 
 /* body{
   background: #F5F5F5;
 } */
 
+
+html {
+  scroll-behavior: smooth;
+}
 
 a{
   text-decoration: none;

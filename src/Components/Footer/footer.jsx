@@ -42,8 +42,7 @@ const Footer = () => {
   	 		<div className="footer-col">
   	 			<h4>follow us</h4>
   	 			<div className="social-links">
-  	 				<a href="https://www.facebook.com/profile.php?id=100085925238721&mibextid=LQQJ4d
-"><i className="fab fa-facebook-f"></i></a>
+  	 				<a href="https://www.facebook.com/profile.php?id=100085925238721&mibextid=LQQJ4d"><i className="fab fa-facebook-f"></i></a>
   	 				<a href="#"><i className="fab fa-twitter"></i></a>
   	 				<a href="#"><i className="fab fa-instagram"></i></a>
   	 				<a href="https://www.linkedin.com/in/laura-joy-8b1752190/?originalSubdomain=ca"><i className="fab fa-linkedin-in"></i></a>

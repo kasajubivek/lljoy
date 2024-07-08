@@ -10,6 +10,7 @@ const Navbar = () => {
             <li>Home</li>
             <li>Practise Areas</li>
             <li>Media</li>
+            <li>Testimonials</li>
             <li>About us</li>
             {/* <li>Campus</li>
             <li>Testimonials</li> */}
