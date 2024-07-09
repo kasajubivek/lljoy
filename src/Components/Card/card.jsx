@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './card.css';
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import { Link } from 'react-router-dom';
 
 
 const Card = ({cards, preTitle, pageTitle}) => {
-
-    useEffect(()=> {
-        AOS.init({duration: 1000});
-      }, []);
-    
 
     // const [cards] = useState([
     //     {
@@ -48,12 +42,13 @@ const Card = ({cards, preTitle, pageTitle}) => {
     return (
         <div>
             <section>
+            <Link to="/practiseArea">
                 <div className="cardContainer">
                     <h1 style={{ fontFamily: '"Noto Serif", serif', fontWeight: 550}}>{preTitle} <span style={{color: 'var(--primaryColor)'}}>{pageTitle}</span></h1>
                     <div className="cards">
                         {
                             cards.map((card, i) => (
-                                <div key={i} className="card" data-aos="zoom-in">
+                                <div key={i} className="card">
                                     <div className="card-title">
                                         <img src={card.image} alt={`image for ${card.title}`} className="card-image" />
                                         <h2>{card.title}</h2>
@@ -68,6 +63,7 @@ const Card = ({cards, preTitle, pageTitle}) => {
 
                     </div>
                 </div>
+                </Link>
             </section>
         </div>
     );

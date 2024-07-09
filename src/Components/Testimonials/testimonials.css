@@ -15,15 +15,15 @@
   box-sizing: border-box;
 } */
 
-body {
-  /* font-family: 'Noto Serif', serif; */
+/* body {
+
   font-family: "Poppins", sans-serif;
   color: var(--primary-color);
   background-color: var(--secondary-color);
   min-height: 100vh;
   display: flex;
   align-items: center;
-}
+} */
 
 .section__container {
   width: 100%;

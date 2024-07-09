@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faAddressCard, faEnvelope, faInbox } from '@fortawesome/free-solid-svg-icons';
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import bkgImg from '../../assets/img.jpg'
 
 const Contact = () => {
@@ -13,10 +11,6 @@ const Contact = () => {
         email: '',
         message: ''
     });
-
-    useEffect(()=> {
-        AOS.init({duration: 1000});
-        }, []);
 
     const handleFocus = (e) => {
         const { parentNode } = e.target;
@@ -50,7 +44,7 @@ const Contact = () => {
         <main>
             <section className='contact'>
                 <div className='contactContainer'>
-                    <div className="left" data-aos="fade-right">
+                    <div className="left">
                         <div className="form-wrapper">
                             <div className="contact-heading">
                                 <h1>Contact Us <span>Now!</span></h1>
@@ -125,7 +119,7 @@ const Contact = () => {
                             </form>
                         </div>
                     </div>
-                    <div className="right" data-aos="fade-left">
+                    <div className="right">
                         <div className="image-wrapper">
                             <div className="contactImage">
                             <iframe

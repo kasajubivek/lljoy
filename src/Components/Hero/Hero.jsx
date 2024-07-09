@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <div className='hero container'>
         <div className='hero-text'>
-            <motion.h1 {...animationProps} transition = {{ duration: 1 }}>A WINDSOR CRIMINAL DEFENSE LAWYER</motion.h1><motion.h2 {...animationProps} className='innerh1'>WHO WILL FIGHT FOR YOU</motion.h2>
+            <motion.h1 {...animationProps} transition = {{ duration: 1 }}>A WINDSOR CRIMINAL DEFENSE LAWYER</motion.h1><motion.h2 {...animationProps} className='innerh1'>WE WIN</motion.h2>
             {/* <h3>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</h3>
             <button className='btnHero'>Explore <img src = {dark_arrow}/></button> */}
             <div className='hero-text-two'>

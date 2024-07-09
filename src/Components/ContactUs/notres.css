@@ -1,7 +1,5 @@
-/* Global styles */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
 
-/* Base styles */
 .two-column-container {
     display: flex;
     justify-content: space-between;
@@ -9,11 +7,38 @@
     margin-bottom: 20px;
 }
 
-.left-column, .right-column {
+.left-column {
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+}
+
+.right-column {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.contact {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.contactContainer {
+    height: 70vh;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+}
+
+.contactContainer > div {
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 .contact-heading h1 {
@@ -147,11 +172,11 @@ textarea.contact-input ~ .fontAwesomeIcon {
 
 .image-wrapper {
     position: relative;
+    grid-column: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin-top: 20px;
 }
 
 .map-heading {
@@ -170,79 +195,4 @@ textarea.contact-input ~ .fontAwesomeIcon {
     margin-top: 20px;
     margin-left: 80px;
     border: 0px;
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 1024px) {
-    .two-column-container {
-        flex-direction: column; /* Stack columns vertically */
-    }
-
-    .left-column, .right-column {
-        width: 100%; /* Occupy full width */
-    }
-
-    .contact-form {
-        grid-template-columns: 1fr; /* Single column layout */
-    }
-
-    .contact-heading h1 {
-        font-size: 2.5rem; /* Adjust font size */
-        text-align: center;
-    }
-
-    .input-wrap.w-100 {
-        grid-column: span 1; /* Span full width */
-    }
-
-    .location {
-        width: 100%; /* Occupy full width */
-        height: 300px; /* Adjust height */
-        margin: 0 auto; /* Center align */
-    }
-
-    .map-heading h2 {
-        font-size: 1.5rem; /* Adjust font size */
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-heading h1 {
-        font-size: 3rem; /* Further reduce font size */
-    }
-
-    .map-heading h2 {
-        font-size: 1.8rem; /* Further reduce font size */
-    }
-
-    .sendBtn {
-        padding: 0.6rem 1.5rem; /* Adjust button padding */
-        font-size: 0.9rem; /* Adjust font size */
-    }
-
-}
-
-@media (max-width: 480px) {
-    .contact-input {
-        padding: 1.2rem 1.1rem calc(0.6rem - 2px) 1.1rem; /* Adjust padding for smaller inputs */
-        font-size: 0.9rem; /* Adjust font size */
-    }
-
-    .input-wrap label {
-        left: calc(1.1rem + 2px); /* Adjust label position */
-    }
-
-    .fontAwesomeIcon {
-        right: calc(1.1rem + 2px); /* Adjust icon position */
-    }
-
-    .sendBtn {
-        padding: 1rem 1.5rem; /* Adjust button padding */
-        font-size: 0.9rem; /* Adjust font size */
-    }
-
-    .location {
-        height: 250px; /* Adjust height */
-    }
-    
-}
+} */

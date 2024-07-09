@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'
 import SwiperCore, { Pagination } from 'swiper'
 import 'swiper/css/pagination';
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+// import AOS from 'aos'
+// import 'aos/dist/aos.css'
 import 'swiper/css';
 import 'remixicon/fonts/remixicon.css';
 import './testimonials.css';
@@ -17,16 +17,17 @@ SwiperCore.use([Pagination]);
 const Testimonials = () => {
 
 
-  useEffect(()=> {
-    AOS.init({duration: 1000});
-    }, []);
+  // useEffect(()=> {
+  //   AOS.init({duration: 1000});
+  //   }, []);
     
 
   return (
     <div className="section__container">
       <div className="header">
-        <p data-aos="fade-right">TESTIMONIALS</p>
-        <h1 data-aos="fade-left">What our <span style={{color: 'var(--primaryColor)'}}>clients</span> say about us.</h1>
+        {/* <p data-aos="fade-right">TESTIMONIALS</p> */}
+        <p>TESTIMONIALS</p>
+        <h1>What our <span style={{color: 'var(--primaryColor)'}}>clients</span> say about us.</h1>
       </div>
       <Swiper
         spaceBetween={50}
@@ -36,7 +37,7 @@ const Testimonials = () => {
         pagination={{ clickable: true }}
       >
         <SwiperSlide>
-          <div className="card" data-aos="zoom-in">
+          <div className="card">
             <span><i className="ri-double-quotes-l"></i></span>
             <p>
             Excellent lawyer with a professional attitude and very professional team. Would definitely recommend Laura Joy to anyone seeking a great lawyer.  She was great to deal with and delivered the results I was looking for
@@ -69,7 +70,7 @@ const Testimonials = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="footer" data-aos="zoom-in">
+      <div className="footer" >
         <h4>Your Success is <span style={{color: 'var(--primaryColor)'}}>Our Priority.</span></h4>
         <p>
         We are committed to providing effective solutions tailored to your legal needs.

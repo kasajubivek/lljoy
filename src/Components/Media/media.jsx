@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import './media.css';
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import newspaper from '../../assets/newspaper.jpg'
 import table from '../../assets/table.jpg'
 import peace from '../../assets/peace.jpg'
 import protest from '../../assets/protest.jpg'
 import crowd from '../../assets/crowd.JPG'
 import reporter from '../../assets/reporter.jpg'
+import { Link } from 'react-router-dom';
 
 const Media = () => {
-    useEffect(()=> {
-        AOS.init({duration: 1000});
-      }, []);
     
 
     const [cards] = useState([
@@ -58,12 +54,12 @@ const Media = () => {
                     <div className="mediaCards">
                         {
                             cards.map((card, i) => (
-                                <div key={i} className="mediaCard" data-aos="zoom-in">
-                                    <div className="media-img-card">
+                                <div key={i} className="mediaCard">
+                                    <Link to="/media"><div className="media-img-card">
                                         <img src={card.image} alt={`image for ${card.title}`} className="media-image" />
                                         {/* <h2>{card.title}</h2> */}
                                     </div>
-                                    <h2>{card.title}</h2>
+                                    <h2>{card.title}</h2></Link>
                                     <span>{card.text}</span>
                                     <div className="read-more">
                                         {/* <a href="#" style = {{fontSize: '15px'}}>Read more &gt;&gt;</a> */}

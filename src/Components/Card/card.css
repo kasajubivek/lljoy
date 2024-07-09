@@ -55,11 +55,25 @@ section{
    /* word-wrap: break-word;  Ensures that long words will break and wrap onto the next line if they exceed the width of their container.s */
     word-break: break-word; /* Similar to word-wrap, this property forces long words to break and wrap to the next line. */
     /* overflow-wrap: break-word; This property is a more modern approach to handle word wrapping. It ensures that words will break if necessary to prevent overflow. */
+    transition: transform 0.4s ease
 }
+
+.card:hover{
+    transform:scale(1.05);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+}
+
+
 
 .card h2 {
     /* margin-bottom: 20px; */
+    transition: color 0.9s ease;
     white-space: pre-wrap; /* This property allows the text to wrap normally. It also respects any line breaks in the source text (although this is not crucial for this specific case) */
+}
+
+.card:hover h2 {
+    color: var(--primaryColor); /* Change text color on hover */
 }
 
 .card span {
