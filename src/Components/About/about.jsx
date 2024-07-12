@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import laura from '../../assets/nobclawyer.png'
+import laura from '../../assets/Laura.jfif'
 
 const about = () => {
 

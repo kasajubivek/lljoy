@@ -1,30 +1,25 @@
-.about{
-    margin:70px auto;
+.about {
+    margin: 70px auto;
     display: flex;
- 
-    /* justify-content: space-between; */
     width: 70%;
-    /* background-color: rgba(60, 178, 194, 0.2); */
-    /* height:70vh  */
+    flex-wrap: wrap; /* Allows children to wrap on smaller screens */
 }
 
-.about-left{
+.about-left {
     flex-basis: 40%;
 }
 
-.about-right{
+.about-right {
     flex-basis: 56%;
 }
 
-.about-img{
+.about-img {
     width: 86%;
-    height: 100%;
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
 }
 
-
-.about h2{
-    color: white;;
+.about h2 {
     color: black;
     font-size: 35px;
     margin: 10px 0;
@@ -32,39 +27,68 @@
     font-weight: 500;
 }
 
-.about h3{
-    color: white;
+.about h3 {
     color: black;
     margin-bottom: 15px;
     font-weight: 300;
     font-size: 20px;
 }
 
-
-.learnMoreBtn{
-      /* background: #bfbfbf;
-  color: #000000; */
-  background: var(--primaryColor);
-  /* background: #1d1d1d; */
-  /* background: #48a3b7; */
-  color: white;
-  margin: 15px 0px;
-  padding: 16px 25px;
-  font-size: 18px;
-  /* border-radius: 30px; */
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-  /* display: inline-flex; */
-  /* align-items: center;
-  justify-content: center; */
-  border-color: #000000;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.learnMoreBtn {
+    background: var(--primaryColor);
+    color: white;
+    margin: 15px 0px;
+    padding: 16px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .learnMoreBtn:hover {
     background-color: #2a6674;
-    border-color: #000000;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; /* Stack elements vertically */
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .about-left, .about-right {
+        flex-basis: 100%; /* Take full width */
+        text-align: center; /* Center text for better readability */
+    }
+
+    .about-img {
+        width: 80%; /* Adjust image size */
+        margin: 0 auto; /* Center image */
+    }
+
+    .about h2 {
+        font-size: 28px; /* Adjust font size */
+    }
+
+    .about h3 {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .learnMoreBtn {
+        padding: 12px 20px; /* Adjust button size */
+        font-size: 16px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .about h2 {
+        font-size: 24px; /* Further reduce font size */
+    }
+
+    .about h3 {
+        font-size: 16px; /* Further reduce font size */
+    }
+}

@@ -1,0 +1,65 @@
+nav{
+    width: 100%;
+    background: #ffffff;
+    color:#000000;
+    padding: 4px 0;
+    position: fixed; /*when scrolling web page*/
+    top: 0; /*fixed at top 0*/
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+
+.logo{
+    width:14vh
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li {
+    position: relative;
+    margin: 0 20px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    padding-top: 5px;
+    display: flex; /* Use flexbox to center vertically */
+    align-items: center; /* Center items vertically */
+  }
+  
+  nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px; /* Adjust as needed */
+    width: 0;
+    height: 2px; /* Height of the bar */
+    background-color: transparent; /* Initial bar color */
+    transition: width 0.5s ease; /* Smooth transition */
+  }
+  
+
+  
+  nav ul li:hover::after {
+    width:100%;
+    background-color: #48a3b7; /* Bar color on hover */
+  }
+
+ 
+
+  .btn:hover {
+    background-color: #2a6674;
+    border-color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
