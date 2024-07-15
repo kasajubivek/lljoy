@@ -9,21 +9,24 @@ import crowd from '../../assets/crowd.JPG'
 import reporter from '../../assets/reporter.jpg'
 import { Link } from 'react-router-dom';
 
-const Media = () => {
+const Media = ({ fromHomeMedia }) => {
     
 
     const [cards] = useState([
         {
+            id:1,
             title: 'Gun & Weapon Charges in the State of Illinois',
             text: 'Weapons charges are more serious than people realize because many carry mandatory minimum prison sentences - sometimes even for 1st offenders...',
-            image: newspaper  // Update this with the correct path to your image
+            image: protest  // Update this with the correct path to your image
         },
-        {
+        {   
+            id:2,
             title: 'Drug Charges in the State of Illinois',
             text: 'There are many types of drug offenses ranging from simple possession to trafficking. Whether the arrest came about because of a suspect traffic stop, hand to hand transaction, or warrant based on a confidential informant...',
             image: table
         },
-        {
+        {   
+            id:3,
             title: 'Violent Crime Charges in the State of Illinois',
             text: 'There is no more serious charge with than murder where the penalties range from 20 years to life. But most people don’t realize that the penalties for attempt murder are almost as harsh and are increasing being sought by the...',
             image: peace
@@ -50,17 +53,19 @@ const Media = () => {
         <div>
             <section>
                 <div className="mediaCardContainer">
-                    <h1 style={{ fontFamily: '"Noto Serif", serif', fontWeight: 550}}>Media<span style={{color: 'var(--primaryColor)'}}></span></h1>
+                { fromHomeMedia ? ( <h1 style={{ fontFamily: '"Noto Serif", serif', fontWeight: 550}}>Media<span style={{color: 'var(--primaryColor)'}}></span></h1>):
+                (<h1 style={{ fontSize: "30px"}}>Related posts<span style={{color: 'var(--primaryColor)'}}></span></h1>)}
+                   
                     <div className="mediaCards">
                         {
                             cards.map((card, i) => (
                                 <div key={i} className="mediaCard">
-                                    <Link to="/media"><div className="media-img-card">
+                                    <Link to={`/media/${card.id}`}><div className="media-img-card">
                                         <img src={card.image} alt={`image for ${card.title}`} className="media-image" />
                                         {/* <h2>{card.title}</h2> */}
                                     </div>
                                     <h2>{card.title}</h2></Link>
-                                    <span>{card.text}</span>
+                                    { fromHomeMedia && (<span>{card.text}</span>)}
                                     <div className="read-more">
                                         {/* <a href="#" style = {{fontSize: '15px'}}>Read more &gt;&gt;</a> */}
                                     </div>

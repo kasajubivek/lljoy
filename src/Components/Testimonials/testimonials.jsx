@@ -43,7 +43,7 @@ const Testimonials = () => {
             Excellent lawyer with a professional attitude and very professional team. Would definitely recommend Laura Joy to anyone seeking a great lawyer.  She was great to deal with and delivered the results I was looking for
             </p>
             <hr />
-            <img src={img1} alt="user" />
+            {/* <img src={img1} alt="user" /> */}
             <p className="name">Allan Collins</p>
           </div>
         </SwiperSlide>
@@ -54,7 +54,7 @@ const Testimonials = () => {
             Laura joy and her staff are amazing!! They always answer back calls and provided me with the information I needed as soon as possible. They are great with handling their cases and care about their clients. I recommend her 1000%
             </p>
             <hr />
-            <img src={img2} alt="user" />
+            {/* <img src={img2} alt="user" /> */}
             <p className="name">Clay Washington</p>
           </div>
         </SwiperSlide>
@@ -65,18 +65,17 @@ const Testimonials = () => {
             Ms. Joy was professional, fought hard for her client, prepared, caring and understood what the family's situation was. I had to attend court on behalf of someone and was able to watch Ms. Joy in action and it was amazing. We won and this allowed her client to finally get the professional  help she needs. Thanks to Ms Joy and all her amazing staff. Well Done.
             </p>
             <hr />
-            <img src={img3} alt="user" />
+            {/* <img src={img3} alt="user" /> */}
             <p className="name">Tanya Grant</p>
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="footer" >
+      {/* <div className="footer" >
         <h4>Your Success is <span style={{color: 'var(--primaryColor)'}}>Our Priority.</span></h4>
         <p>
         We are committed to providing effective solutions tailored to your legal needs.
         </p>
-        {/* <button>GET A QUOTE</button> */}
-      </div>
+      </div> */}
     </div>
   );
 };

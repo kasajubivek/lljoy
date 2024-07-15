@@ -12,6 +12,7 @@ nav {
   z-index: 10;
   padding-left: 8%;
   padding-right: 8%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
 }
 
 .logo {

@@ -29,7 +29,7 @@ const App = () => {
       <Navbar/>
       <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/media" element={<MediaPage />} />
+            <Route path="/media/:id" element={<MediaPage />} />
             <Route path="/test" element={<Test />} />
             {/* Define more routes as needed */}
       </Routes>

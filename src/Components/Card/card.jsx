@@ -54,9 +54,9 @@ const Card = ({cards, preTitle, pageTitle}) => {
                                         <h2>{card.title}</h2>
                                     </div>
                                     <span>{card.text}</span>
-                                    <div className="read-more">
+                                    {/* <div className="read-more">
                                         <a href="#" style = {{fontSize: '15px'}}>Read more &gt;&gt;</a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             ))
                         }

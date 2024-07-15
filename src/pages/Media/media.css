@@ -1,0 +1,92 @@
+.med-about-container {
+    font-family: Arial, sans-serif;
+}
+
+.med-hero-image {
+    /* background-image: url('../../assets/newspaper.jpg'); */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+.med-hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.med-hero-image h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 70px;
+    text-align: center; /* Center text */
+}
+
+.med-row {
+    display: flex;
+    padding: 5px;
+    max-width: 70%;
+    margin: 0px auto;
+}
+
+.med-two-columns {
+    justify-content: space-between; /* Adjust to ensure equal spacing */
+}
+
+.med-one-column {
+    justify-content: center;
+}
+
+.med-column {
+    flex: 1; /* Make columns equal width */
+    margin: 0 10px; /* Adjust margins */
+    padding: 20px;
+    border-radius: 8px; /* Optional: rounded corners */
+
+}
+
+.med-column h2 {
+    margin-top: 0;
+    text-align: left; /* Align heading text */
+}
+
+.med-column-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add space below image */
+}
+
+.med-column h4 {
+    text-align: left; /* Align paragraph text */
+    line-height: 1.6; /* Improve readability */
+
+    font-weight: 20px;
+}
+
+.med-column ul {
+    list-style-type: disc; /* or circle, square, etc. */
+    margin-left: 20px; /* Indentation */
+}
+
+
+.med-con-div{
+    max-width: 70%;
+    max-height: 30%;
+    margin: 0px auto;
+}
+
+@media (max-width: 768px) {
+    .med-hero-image h1 {
+        font-size: 40px; /* Responsive font size */
+    }
+}

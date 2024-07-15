@@ -20,7 +20,7 @@ const Navbar = () => {
         <li>Practise Areas</li>
         <li>Media</li>
         <li>Testimonials</li>
-        <li>About us</li>
+        {/* <li>About us</li> */}
         <li><button className='btn'>Contact us</button></li>
       </ul>
     </nav>

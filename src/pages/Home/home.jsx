@@ -15,7 +15,7 @@ const Home = () => {
         <About/>
         {/* <Card/> */}
         <PractiseAreas/>
-        <Media/>
+        <Media fromHomeMedia={true}/>
         <Testimonials/>
         <ContactUs/>
         {/* <WhyUs/> */}
