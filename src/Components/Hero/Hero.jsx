@@ -25,7 +25,7 @@ const Hero = () => {
         <div className='google'>
             <h1><a target="_blank" href="https://www.google.com/search?kgmid=/g/11bydmbm3g&hl=en-CA&q=Laura+Joy&kgs=1a0d8a3fb63a0528&shndl=30&shem=lrnolc,ssic&source=sh/x/loc/osrp/m5/1#lrd=0x883b2d1fc0a71c95:0x38964b77418b811d,1,,,,">Google</a></h1>
             <div className="rating">
-                <span>4.4</span>
+                <span>4.3 </span>
                 <span className="stars">
                     <span>&#9733;</span>
                     <span>&#9733;</span>

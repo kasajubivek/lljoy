@@ -15,6 +15,7 @@ import Footer from './Components/Footer/footer'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import PractiseAreas from './Components/PractiseAreas/practiseAreas'
 import MediaPage from './pages/Media/media'
+import PractiseAreasPage from './pages/PractiseAreas/practiseAreas'
 import Test from './pages/Test/test'
 import Media from './Components/Media/media'
 import Home from './pages/Home/home'
@@ -30,6 +31,7 @@ const App = () => {
       <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/media/:id" element={<MediaPage />} />
+            <Route path="/practiseAreas" element={<PractiseAreasPage />} />
             <Route path="/test" element={<Test />} />
             {/* Define more routes as needed */}
       </Routes>

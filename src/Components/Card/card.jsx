@@ -64,6 +64,7 @@ const Card = ({cards, preTitle, pageTitle}) => {
                     </div>
                 </div>
                 </Link>
+                <Link to="/practiseAreas"><button className='cardBtn'>Explore more</button></Link>
             </section>
         </div>
     );

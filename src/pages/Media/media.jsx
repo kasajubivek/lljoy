@@ -22,19 +22,19 @@ const Media = () => {
   const [cards] = useState([
     {
         id:1,
-        title: 'Gun & Weapon Charges in the State of Illinois',
+        title: 'Gun & Weapon Charges in the State of Ontario',
         text: 'Weapons charges are more serious than people realize because many carry mandatory minimum prison sentences - sometimes even for 1st offenders...',
         image: protest  // Update this with the correct path to your image
     },
     {   
         id:2,
-        title: 'Drug Charges in the State of Illinois',
+        title: 'Drug Charges in the State of Ontario',
         text: 'There are many types of drug offenses ranging from simple possession to trafficking. Whether the arrest came about because of a suspect traffic stop, hand to hand transaction, or warrant based on a confidential informant...',
         image: table
     },
     {   
         id:3,
-        title: 'Violent Crime Charges in the State of Illinois',
+        title: 'Violent Crime Charges in the State of Ontario',
         text: 'There is no more serious charge with than murder where the penalties range from 20 years to life. But most people don’t realize that the penalties for attempt murder are almost as harsh and are increasing being sought by the...',
         image: peace
     },

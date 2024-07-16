@@ -35,19 +35,8 @@ const Testimonials = () => {
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         pagination={{ clickable: true }}
-      >
-        <SwiperSlide>
-          <div className="card">
-            <span><i className="ri-double-quotes-l"></i></span>
-            <p>
-            Excellent lawyer with a professional attitude and very professional team. Would definitely recommend Laura Joy to anyone seeking a great lawyer.  She was great to deal with and delivered the results I was looking for
-            </p>
-            <hr />
-            {/* <img src={img1} alt="user" /> */}
-            <p className="name">Allan Collins</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
+      > 
+      <SwiperSlide>
           <div className="card">
             <span><i className="ri-double-quotes-l"></i></span>
             <p>
@@ -55,18 +44,29 @@ const Testimonials = () => {
             </p>
             <hr />
             {/* <img src={img2} alt="user" /> */}
-            <p className="name">Clay Washington</p>
+            <p className="name">Rubiana Steil</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="card">
             <span><i className="ri-double-quotes-l"></i></span>
             <p>
-            Ms. Joy was professional, fought hard for her client, prepared, caring and understood what the family's situation was. I had to attend court on behalf of someone and was able to watch Ms. Joy in action and it was amazing. We won and this allowed her client to finally get the professional  help she needs. Thanks to Ms Joy and all her amazing staff. Well Done.
+            The staff super friendly, easy to get along with, always knows great advice, great teamwork, always point you in the right direction, can't go wrong. Miss Joy is a wonderful lady, also can get things done.
+            </p>
+            <hr />
+            {/* <img src={img1} alt="user" /> */}
+            <p className="name">Kelly Patricia Barnes</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="card">
+            <span><i className="ri-double-quotes-l"></i></span>
+            <p>
+            Ms. Joy was professional, fought hard for her client, prepared, caring and understood what the family's situation was. I had to attend court on behalf of someone and was able to watch Ms. Joy in action and it was amazing. We won and this allowed her client to finally get the professional help she needs. Thanks to Ms Joy and all her amazing staff. Well Done.
             </p>
             <hr />
             {/* <img src={img3} alt="user" /> */}
-            <p className="name">Tanya Grant</p>
+            <p className="name">Greta Clarke</p>
           </div>
         </SwiperSlide>
       </Swiper>

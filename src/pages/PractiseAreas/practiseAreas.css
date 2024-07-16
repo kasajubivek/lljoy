@@ -1,0 +1,92 @@
+.prac-about-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.prac-row {
+    display: flex;
+    align-items: center;
+    margin: 80px 0; /* Space between rows */
+}
+
+.prac-text {
+    flex: 1;
+    padding: 10px;
+}
+
+.prac-image {
+    flex: 0 0 150px; /* Fixed width for the image */
+    display: flex;
+    justify-content: center;
+}
+
+.prac-small-image {
+    width: 100%; /* Responsive image */
+    height: auto;
+}
+
+.prac-hero-image {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+.prac-hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.prac-hero-image h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 70px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .prac-hero-image h1 {
+        font-size: 40px; /* Responsive font size */
+    }
+    
+    .prac-row {
+        flex-direction: column; /* Stack items on small screens */
+        align-items: flex-start;
+    }
+
+    .prac-image {
+        margin-top: 10px; /* Space between text and image */
+    }
+}
+
+
+.prac-content{
+    max-width: 70%;
+    max-height: 30%;
+    margin: 0px auto;
+}
+
+
+.prac-text h2 {
+    font-size: 40px;
+}
+
+.prac-text p {
+    margin-top: 1%;
+    font-size: 20px;
+}
+
+.prac-image img{
+    height: 250px;
+    width: 400px;
+}
