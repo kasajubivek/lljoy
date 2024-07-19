@@ -15,11 +15,7 @@ const Navbar = () => {
   const isInPractiseAreasOrMedia = location.pathname.includes('/practiseAreas') || location.pathname.includes('/media');
   return (
     <nav className='container'>
-      {isInPractiseAreasOrMedia ? (
-        <Link to="/#hero"><img src={logo} alt="Logo" className='logo' /></Link>
-      ) : (
-        <HashLink to="#hero"><img src={logo} alt="Logo" className='logo' /></HashLink>
-      )}
+      {<HashLink to={isInPractiseAreasOrMedia ? "/#hero" : "#hero"}><img src={logo} alt="Logo" className='logo' /></HashLink>}
       <button className='menu-toggle' onClick={toggleMenu}>
         {isMenuOpen ? 'Close' : 'Menu'}
       </button>
