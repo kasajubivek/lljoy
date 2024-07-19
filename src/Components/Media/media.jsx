@@ -7,6 +7,8 @@ import peace from '../../assets/peace.jpg'
 import protest from '../../assets/protest.jpg'
 import crowd from '../../assets/crowd.JPG'
 import reporter from '../../assets/reporter.jpg'
+import gun from '../../assets/guns2.jpg'
+import rifle from '../../assets/rifle.jpg'
 import { Link } from 'react-router-dom';
 
 const Media = ({ fromHomeMedia }) => {
@@ -17,7 +19,7 @@ const Media = ({ fromHomeMedia }) => {
             id:1,
             title: 'Gun & Weapon Charges in the State of Ontario',
             text: 'Weapons charges are more serious than people realize because many carry mandatory minimum prison sentences - sometimes even for 1st offenders...',
-            image: protest  // Update this with the correct path to your image
+            image: rifle  // Update this with the correct path to your image
         },
         {   
             id:2,
@@ -51,7 +53,7 @@ const Media = ({ fromHomeMedia }) => {
 
     return (
         <div>
-            <section>
+            <section id="media">
                 <div className="mediaCardContainer">
                 { fromHomeMedia ? ( <h1 style={{ fontFamily: '"Noto Serif", serif', fontWeight: 550}}>Media<span style={{color: 'var(--primaryColor)'}}></span></h1>):
                 (<h1 style={{ fontSize: "30px"}}>Related posts<span style={{color: 'var(--primaryColor)'}}></span></h1>)}

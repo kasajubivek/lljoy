@@ -40,7 +40,7 @@ const contactUs = () => {
     };
 
     return (
-        <div className="two-column-container">
+        <div className="two-column-container" id="contactUs">
           <div className="left-column">
           <div className="left">
                         <div className="form-wrapper">

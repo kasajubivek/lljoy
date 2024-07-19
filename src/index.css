@@ -62,3 +62,20 @@ a{
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+#about,
+#practiseAreas,
+#media,
+#testimonials,
+#contactUs {
+  padding-top: 100px; 
+}
+
+@media (max-width: 768px) {
+  #about,
+  #practiseAreas,
+  #media,
+  #testimonials,
+  #contactUs {
+    padding-top: 60px; /* Adjust padding for smaller screens */
+  }
+}

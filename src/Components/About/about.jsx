@@ -5,7 +5,7 @@ import laura from '../../assets/Laura.jfif'
 const about = () => {
 
   return (
-    <div className='about'>
+    <div className='about' id="about">
         <div className="about-left">
             <img src={laura} className='about-img'/>
         </div>

@@ -12,7 +12,7 @@ const Hero = () => {
 };
   
   return (
-    <div className='hero container'>
+    <div className='hero container' id="hero">
         <div className='hero-text'>
             <motion.h1 {...animationProps} transition = {{ duration: 1 }}>A WINDSOR CRIMINAL DEFENSE LAWYER</motion.h1><motion.h2 {...animationProps} className='innerh1'>WE WIN</motion.h2>
             {/* <h3>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</h3>

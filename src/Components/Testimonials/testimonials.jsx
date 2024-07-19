@@ -23,7 +23,7 @@ const Testimonials = () => {
     
 
   return (
-    <div className="section__container">
+    <div className="section__container" id="testimonials">
       <div className="header">
         {/* <p data-aos="fade-right">TESTIMONIALS</p> */}
         <p>TESTIMONIALS</p>

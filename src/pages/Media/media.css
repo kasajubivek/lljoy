@@ -57,7 +57,23 @@
 
 .med-column h2 {
     margin-top: 0;
-    text-align: left; /* Align heading text */
+    text-align: left;
+    font-size: 30px; /* Adjust font size for h2 */
+}
+
+.med-column span {
+    font-size: 21px; /* Adjust font size for span */
+    line-height: 1.6;
+}
+
+.med-column ul {
+    list-style-type: disc;
+    /* margin-left: 20px; */
+    margin-top: 10px;
+}
+
+.med-column ul li {
+    font-size: 18px; /* Default font size */
 }
 
 .med-column-image {
@@ -88,5 +104,15 @@
 @media (max-width: 768px) {
     .med-hero-image h1 {
         font-size: 40px; /* Responsive font size */
+    }
+    .med-column h2 {
+        font-size: 20px; /* Responsive font size for h2 */
+    }
+    .med-column span {
+        font-size: 16px; /* Responsive font size for span */
+    }
+
+    .med-column ul li {
+        font-size: 16px; /* Adjust font size for smaller screens */
     }
 }

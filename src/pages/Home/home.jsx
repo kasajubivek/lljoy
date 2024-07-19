@@ -5,6 +5,7 @@ import PractiseAreas from '../../Components/PractiseAreas/practiseAreas'
 import Media from '../../Components/Media/media'
 import ContactUs from '../../Components/ContactUs/contactUs'
 import Testimonials from '../../Components/Testimonials/testimonials'
+import './home.css';
 
 const Home = () => {
   return (
@@ -17,7 +18,9 @@ const Home = () => {
         <PractiseAreas/>
         <Media fromHomeMedia={true}/>
         <Testimonials/>
+        <div className="con-div">
         <ContactUs/>
+        </div>
         {/* <WhyUs/> */}
       </div>
     </div>

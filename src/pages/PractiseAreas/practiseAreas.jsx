@@ -1,12 +1,18 @@
 import React, { useState, useEffect  } from 'react';
 import { useLocation } from 'react-router-dom';
 import './practiseAreas.css';
+import ContactUs from '../../Components/ContactUs/contactUs'
 import newspaper from '../../assets/newspaper.jpg';
 import table from '../../assets/table.jpg';
 import peace from '../../assets/peace.jpg';
 import protest from '../../assets/protest.jpg';
 import crowd from '../../assets/crowd.JPG';
 import reporter from '../../assets/reporter.jpg';
+import checking from '../../assets/checking.JPG';
+import caught from '../../assets/caught.jpg'
+import windowCrack from '../../assets/windowCrack.JPG'
+import punch from '../../assets/punch.jpg'
+import hammer from '../../assets/hammer.jpg'
 import MediaComp from '../../Components/Media/media'
 import { useParams } from 'react-router-dom';
 
@@ -21,14 +27,14 @@ const PractiseAreas = () => {
     {
         id:1,
         title: 'Sexual Assault',
-        text: 'A charge of sexual assault can affect you for the rest of your life. If you are convicted, your education, reputation, and ability to earn a living can be greatly reduced. Our sexual assault lawyers have extensive experience representing clients accused of sexual crimes, and we offer free, confidential consultations. Contact us to learn how we will guide you through the court process and present your best defence.',
+        text: 'A charge of sexual assault can affect you for the rest of your life. If you are convicted, your education, reputation, and ability to earn a living can be greatly reduced. Our sexual assault lawyers have extensive experience representing clients accused of sexual crimes, and we offer free, confidential consultations.',
         image: protest  // Update this with the correct path to your image
     },
     {   
         id:2,
         title: 'Impaired Driving/DUI',
         text: 'If you have been arrested for impaired driving, you’ll need an experienced criminal defence lawyer to explain your options and fight for the best possible outcome. We have helped many people who were facing charges of DUI, refusing a breath test, and impaired care or control of a vehicle, and we can do the same for you. Contact us to start your free online consultation with an experienced impaired driving lawyer.',
-        image: table
+        image: checking
     },
     {   
         id:3,
@@ -46,7 +52,7 @@ const PractiseAreas = () => {
         id:4,
         title: 'Assault',
         text: 'If you’re considering pleading guilty to a charge of assault, you should know that the resulting conviction can have permanent consequences. Our criminal defence lawyers have years of experience fighting for the best possible outcome for our clients, and we offer free online consultations to ease the pressure you are under. Contact us today. We will answer your questions and explain your rights under the law.',
-        image: protest
+        image: punch
     },
     {   
         id:5,
@@ -58,7 +64,7 @@ const PractiseAreas = () => {
         id:6,
         title: 'Mischief',
         text: 'Mischief charges can include a wide range of destruction or adulteration of someone else’s property. If you have been accused of willfully damaging someone’s home or possessions with no intent to steal, our defence lawyers offer free online consultations to explain your options. Contact Kruse Law Firm today to have us begin building your case to protect you in court.',
-        image: crowd
+        image: windowCrack
     },
     {   
         id:7,
@@ -70,7 +76,7 @@ const PractiseAreas = () => {
         id:8,
         title: 'Theft',
         text: 'Theft may seem like a minor offence, but being convicted or pleading guilty to these charges can have permanent consequences. Our criminal defence lawyers have fought for clients facing a wide range of theft charges, including retail theft, workplace theft, shoplifting, price switching, and gaming offences. Contact us today to have us explain your rights in a free and confidential consultation.',
-        image: table
+        image: caught
     },
 
 ]);
@@ -84,15 +90,14 @@ const PractiseAreas = () => {
         {/* First Row */}
         <div className="prac-hero-image">
                 <img 
-        src={peace}
+        src={hammer}
         alt="Hero" 
         style={{ 
           width: '100%', 
           height: '100%', 
           objectFit: 'cover', 
-          position: 'absolute', 
-          top: 0, 
-          left: 0 
+          position: 'absolute',
+          objectPosition: '0% 55%'
         }} 
       />
           <h1>Practise Areas</h1>
@@ -112,6 +117,7 @@ const PractiseAreas = () => {
             ))}
         </div>
     </div>
+    <ContactUs/>
     </div>
   );
 }

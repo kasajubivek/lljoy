@@ -7,7 +7,10 @@ import peace from '../../assets/peace.jpg';
 import protest from '../../assets/protest.jpg';
 import crowd from '../../assets/crowd.JPG';
 import reporter from '../../assets/reporter.jpg';
+import gun from '../../assets/guns2.jpg'
+import rifle from '../../assets/rifle.jpg'
 import MediaComp from '../../Components/Media/media'
+import ContactUs from '../../Components/ContactUs/contactUs'
 import { useParams } from 'react-router-dom';
 
 const Media = () => {
@@ -24,7 +27,7 @@ const Media = () => {
         id:1,
         title: 'Gun & Weapon Charges in the State of Ontario',
         text: 'Weapons charges are more serious than people realize because many carry mandatory minimum prison sentences - sometimes even for 1st offenders...',
-        image: protest  // Update this with the correct path to your image
+        image: rifle  // Update this with the correct path to your image
     },
     {   
         id:2,
@@ -58,8 +61,7 @@ const selectedCard = cards.find(card => card.id === cardId);
           height: '100%', 
           objectFit: 'cover', 
           position: 'absolute', 
-          top: 0, 
-          left: 0 
+        objectPosition: '0% 45%'
         }} 
       />
           <h1>{selectedCard.title}</h1>
@@ -130,6 +132,7 @@ const selectedCard = cards.find(card => card.id === cardId);
         </div>
         <div className="med-con-div">
         <MediaComp/>
+        <ContactUs/>
         </div>
       </div>
     </div>

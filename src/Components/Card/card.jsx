@@ -42,7 +42,7 @@ const Card = ({cards, preTitle, pageTitle}) => {
     return (
         <div>
             <section>
-            <Link to="/practiseArea">
+            {/* <Link to="/practiseArea"> */}
                 <div className="cardContainer">
                     <h1 style={{ fontFamily: '"Noto Serif", serif', fontWeight: 550}}>{preTitle} <span style={{color: 'var(--primaryColor)'}}>{pageTitle}</span></h1>
                     <div className="cards">
@@ -63,7 +63,7 @@ const Card = ({cards, preTitle, pageTitle}) => {
 
                     </div>
                 </div>
-                </Link>
+                {/* </Link> */}
                 <Link to="/practiseAreas"><button className='cardBtn'>Explore more</button></Link>
             </section>
         </div>

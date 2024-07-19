@@ -15,7 +15,7 @@ const Footer = () => {
   	 		<div className="footer-col">
   	 			<h4>company</h4>
   	 			<ul>
-  	 				<li><a href="#">About Us</a></li>
+  	 				{/* <li><a href="#">About Us</a></li> */}
   	 				{/* <li><a href="#">Practise Areas</a></li> */}
   	 				<li><a href="#">Media</a></li>
   	 			</ul>
@@ -23,11 +23,14 @@ const Footer = () => {
   	 		<div className="footer-col">
   	 			<h4>Practise Areas</h4>
   	 			<ul>
-  	 				<li><a href="#">Gun Charges</a></li>
-  	 				<li><a href="#">Drug Charges</a></li>
-  	 				<li><a href="#">Violent Crime</a></li>
-  	 				<li><a href="#">Domestic Violence</a></li>
-  	 				<li><a href="#">DUI/Traffic</a></li>
+  	 				<li><a href="#">Sexual Assault</a></li>
+  	 				<li><a href="#">Impaired Driving/DUI</a></li>
+  	 				<li><a href="#">Domestic Assault</a></li>
+  	 				<li><a href="#">Assault</a></li>
+  	 				<li><a href="#">Uttering Threats</a></li>
+					<li><a href="#">Mischief</a></li>
+  	 				<li><a href="#">Criminal Harassment</a></li>
+  	 				<li><a href="#">Theft</a></li>
   	 			</ul>
   	 		</div>
   	 		<div className="footer-col">
