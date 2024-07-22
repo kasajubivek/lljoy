@@ -1,68 +1,56 @@
-.hero{
+.hero {
     position: relative;
-    width:100%;
+    width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(122, 122, 122, 0.1),rgba(122, 122, 122, 0.1)),url('../../assets/bridge1.jpg');
+    background: linear-gradient(rgba(122, 122, 122, 0.1), rgba(122, 122, 122, 0.1)), url('../../assets/bridge1.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     display: flex;
     align-items: center;
-    /* filter: blur(1px);
-    z-index: -2; */
-    /* justify-content: left; */
-
-    padding-left: 8%;
-    padding-right: 8%;
-    
+    justify-content: left; /* Center content horizontally */
+    padding: 0 8%;
 }
-
 
 .hero-text {
     text-align: center;
-    max-width: 800px;
+    max-width: 1041px;
     top: -90px;
-    height: 100%; 
+    width: 100%;
 }
 
-.hero-text-two{
+.hero-text-two {
     text-align: center;
     max-width: 800px;
     top: -90px;
-    height: 100%; 
+    width: 100%;
 }
 
-.hero-text h1{
+.hero-text h1 {
     font-size: 60px;
     font-weight: 450;
     display: inline-block;
-    width: 132%;
-    text-align: left; 
+    width: 100%;
+    text-align: left;
     background-color: rgba(46, 46, 46, 0.7);
-    /* max-width: 200px; */
 }
 
-.innerh1{
+.innerh1 {
     font-size: 60px;
     font-weight: 450;
     display: inline-block;
-    text-align: left; 
-    /* background-color: rgb(218, 217, 217); */
+    text-align: left;
     background-color: rgba(218, 217, 217, 0.7);
     display: inline-block;
     border-right: 5px solid;
     white-space: nowrap;
     overflow: hidden;
-    color:rgb(5, 54, 63);
-    animation: typing 2s steps(13),
-                cursor .4s step-end infinite alternate;
-    /* max-width: 200px; */
+    color: rgb(5, 54, 63);
+    animation: typing 2s steps(13), cursor .4s step-end infinite alternate;
 }
 
-
-.google h1, .rating span{
-
-    animation: scaleAnimation 1s infinite alternate; /* Add animation */
+.google h1, .rating span {
+    animation: scaleAnimation 1s infinite alternate;
 }
 
 @keyframes scaleAnimation {
@@ -71,7 +59,7 @@
 }
 
 @keyframes cursor {
-    50% { border-color: transparent}
+    50% { border-color: transparent; }
 }
 
 @keyframes typing {
@@ -79,18 +67,15 @@
     100% { max-width: 100%; }
 }
 
-.hero-text h3{
-    /* font-size: 18px; */
+.hero-text h3 {
     font-weight: 400;
     display: inline-block;
     width: 80%;
-    text-align: left; 
-     margin: 10px auto 20px;
-    /* max-width: 200px; */
+    text-align: left;
+    margin: 10px auto 20px;
 }
 
-
-.btnHero{
+.btnHero {
     background: #ffffff;
     color: #000000;
     padding: 20px 25px;
@@ -103,41 +88,102 @@
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
+}
 
-  .btnHero img{
+.btnHero img {
     width: 20px;
     margin-left: 10px;
-  }
+}
 
-  .btnHero:hover {
+.btnHero:hover {
     background-color: #e0e0e0;
     border-color: #000000;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-
-
-  .google {
-    position: absolute; /* Add this line */
-    bottom: 0; /* Add this line */
-    right: 0; /* Add this line */
-    text-align: right;
-    font-size: 28px;
-    bottom: 40px; /* Add some bottom margin */
-    right: 200px; 
 }
 
-  .google h1 {
+.google {
+    position: absolute;
+    bottom: 40px;
+    right: 200px;
+    text-align: right;
+    font-size: 28px;
+}
+
+.google h1 {
     font-size: 50px;
     font-weight: 450;
     display: inline-block;
     width: 100%;
     text-align: right;
-    /* margin-bottom: 20px; */
 }
 
 .rating {
     text-align: right;
     font-size: 28px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .hero-text h1, .innerh1 {
+        font-size: 50px;
+    }
+
+    .google {
+        right: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-text h1, .innerh1 {
+        font-size: 40px;
+    }
+
+    .google {
+        right: 30px;
+    }
+
+    .btnHero {
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 5%;
+        justify-content: flex-start; /* Align content to the left */
+    }
+
+    .hero-text h1, .innerh1 {
+        font-size: 35px;
+    }
+
+    .google {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text h1, .innerh1 {
+        font-size: 30px;
+    }
+
+    .hero-text h3 {
+        font-size: 16px;
+    }
+
+    .btnHero {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .google h1 {
+        font-size: 40px;
+    }
+
+    .rating {
+        font-size: 24px;
+    }
 }

@@ -26,18 +26,30 @@ nav {
   color: white;
   border: none;
   cursor: pointer;
+  position: relative;
+  z-index: 11; /* Make sure it’s above the menu */
 }
 
 /* Adjust the menu for small screens */
 nav ul {
   display: flex;
   list-style: none;
-  transition: max-height 0.3s ease; /* Smooth height transition */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth opacity and visibility transition */
+  position: absolute; /* Position it absolutely */
+  top: 100%; /* Position it below the nav */
+  left: 0;
+  right: 0;
+  background: #ffffff; /* Ensure the menu has a background */
+  padding: 10px 0; /* Add padding */
+  opacity: 0; /* Hidden by default */
+  visibility: hidden; /* Hidden by default */
+  z-index: 10; /* Ensure it's below the menu toggle button */
 }
 
 nav ul.active {
-  display: flex; /* Show when active */
-  flex-direction: column; /* Stack items vertically */
+  opacity: 1; /* Show when active */
+  visibility: visible; /* Show when active */
+  padding-left: 10%; 
 }
 
 nav ul li {
@@ -80,14 +92,9 @@ nav ul li:hover::after {
   }
 
   nav ul {
-    display: none; /* Hide menu by default */
+    display: flex; /* Display as flex for small screens */
     flex-direction: column; /* Stack items vertically */
     width: 100%; /* Full width */
-    padding: 10px 0; /* Add padding */
-  }
-
-  nav ul.active {
-    display: flex; /* Show when active */
   }
 
   nav ul li {
