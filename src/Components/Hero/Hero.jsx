@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { delay, motion } from "framer-motion";
 import './Hero.css'
 import dark_arrow from '../../assets/arrow.png'
+import { HashLink } from 'react-router-hash-link';
 
 const Hero = () => {
 
@@ -19,7 +20,7 @@ const Hero = () => {
             <button className='btnHero'>Explore <img src = {dark_arrow}/></button> */}
             <div className='hero-text-two'>
               <motion.h3 {...animationProps} transition = {{ delay: 2 }}>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</motion.h3>
-              <motion.button {...animationProps} transition = {{ delay: 3 }} className='btnHero'>Contact Us Now<img src = {dark_arrow}/></motion.button>
+              <motion.button {...animationProps} transition = {{ delay: 3 }} className='btnHero'><HashLink to="#contactUs">Contact Us Now</HashLink><img src = {dark_arrow}/></motion.button>
             </div>
         </div>
         <div className='google'>
