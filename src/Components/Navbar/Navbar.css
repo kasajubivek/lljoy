@@ -104,6 +104,10 @@ nav ul li:hover::after {
   .logo {
     width: 12vh; /* Adjust logo size */
   }
+
+  nav ul li:hover::after {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -125,5 +129,9 @@ nav ul li:hover::after {
 
   .btn {
     padding: 10px 15px; /* Adjust button padding */
+  }
+  
+  nav ul li:hover::after {
+    display: none;
   }
 }
