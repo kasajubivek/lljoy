@@ -3,7 +3,6 @@
 }
 
 .med-hero-image {
-    /* background-image: url('../../assets/newspaper.jpg'); */
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -52,7 +51,6 @@
     margin: 0 10px; /* Adjust margins */
     padding: 20px;
     border-radius: 8px; /* Optional: rounded corners */
-
 }
 
 .med-column h2 {
@@ -68,7 +66,6 @@
 
 .med-column ul {
     list-style-type: disc;
-    /* margin-left: 20px; */
     margin-top: 10px;
 }
 
@@ -85,7 +82,6 @@
 .med-column h4 {
     text-align: left; /* Align paragraph text */
     line-height: 1.6; /* Improve readability */
-
     font-weight: 20px;
 }
 
@@ -94,8 +90,7 @@
     margin-left: 20px; /* Indentation */
 }
 
-
-.med-con-div{
+.med-con-div {
     max-width: 70%;
     max-height: 30%;
     margin: 0px auto;
@@ -111,8 +106,13 @@
     .med-column span {
         font-size: 16px; /* Responsive font size for span */
     }
-
     .med-column ul li {
         font-size: 16px; /* Adjust font size for smaller screens */
+    }
+    .med-row {
+        max-width: 90%; /* Increase max-width for smaller screens */
+    }
+    .med-con-div {
+        max-width: 90%; /* Increase max-width for smaller screens */
     }
 }

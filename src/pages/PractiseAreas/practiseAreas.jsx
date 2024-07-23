@@ -117,7 +117,9 @@ const PractiseAreas = () => {
             ))}
         </div>
     </div>
-    <ContactUs/>
+    <div className="con-div">
+        <ContactUs/>
+        </div>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 .prac-about-container {
     font-family: Arial, sans-serif;
-    padding: 20px;
     max-width: 100%; /* Ensure container does not exceed the viewport width */
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -19,7 +18,7 @@
 }
 
 .prac-image {
-    flex: 0 0 150px; /* Fixed width for the image */
+    flex: 0 0 400px; /* Allow image to take up more space */
     display: flex;
     justify-content: center;
 }
@@ -27,6 +26,7 @@
 .prac-small-image {
     width: 100%; /* Responsive image */
     height: auto;
+    max-width: 400px; /* Ensure the image does not exceed a maximum width */
 }
 
 .prac-hero-image {
