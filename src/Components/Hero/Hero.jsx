@@ -15,9 +15,8 @@ const Hero = () => {
   return (
     <div className='hero container' id="hero">
         <div className='hero-text'>
-            <motion.h1 {...animationProps} transition = {{ duration: 1 }}>A WINDSOR CRIMINAL DEFENSE LAWYER</motion.h1><motion.h2 {...animationProps} className='innerh1'>WE WIN</motion.h2>
-            {/* <h3>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</h3>
-            <button className='btnHero'>Explore <img src = {dark_arrow}/></button> */}
+            <motion.h1 {...animationProps} transition = {{ duration: 1 }}>A WINDSOR CRIMINAL DEFENSE LAWYER</motion.h1>
+            <motion.h2 {...animationProps} className='innerh1'>WE WIN</motion.h2>
             <div className='hero-text-two'>
               {/* <motion.h3 {...animationProps} transition = {{ delay: 2 }}>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</motion.h3> */}
               <motion.button {...animationProps} transition = {{ delay: 3 }} className='btnHero'><HashLink to="#contactUs">Contact Us Now</HashLink><img src = {dark_arrow}/></motion.button>
