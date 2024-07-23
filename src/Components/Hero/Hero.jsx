@@ -19,7 +19,7 @@ const Hero = () => {
             {/* <h3>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</h3>
             <button className='btnHero'>Explore <img src = {dark_arrow}/></button> */}
             <div className='hero-text-two'>
-              <motion.h3 {...animationProps} transition = {{ delay: 2 }}>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</motion.h3>
+              {/* <motion.h3 {...animationProps} transition = {{ delay: 2 }}>Let criminal defense lawyer Laura Joy put her years of experience to work fighting for your rights.</motion.h3> */}
               <motion.button {...animationProps} transition = {{ delay: 3 }} className='btnHero'><HashLink to="#contactUs">Contact Us Now</HashLink><img src = {dark_arrow}/></motion.button>
             </div>
         </div>
