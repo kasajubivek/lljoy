@@ -33,36 +33,11 @@ const contactUs = () => {
         }));
     };
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     // Handle form submission logic here
-    //     console.log('Form submitted:', inputs);
-    // };
-
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-      
-        try {
-          const response = await fetch('/.netlify/functions/sendEmail', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(inputs),
-          });
-      
-          if (!response.ok) {
-            throw new Error('Network response was not ok.');
-          }
-      
-          alert('Message sent successfully!');
-          setInputs({ firstName: '', lastName: '', email: '', message: '' });
-        } catch (error) {
-          console.error('Error sending message:', error);
-          alert('There was a problem sending your message.');
-        }
-      };
-      
+        // Handle form submission logic here
+        console.log('Form submitted:', inputs);
+    };
 
     return (
         <div className="two-column-container" id="contactUs">
