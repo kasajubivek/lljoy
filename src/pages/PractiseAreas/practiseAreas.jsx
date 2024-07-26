@@ -105,7 +105,7 @@ const PractiseAreas = () => {
 
         <div className="prac-content">
             {cards.map(card => (
-            <div key={card.id} className="prac-row">
+            <div key={card.id} className="prac-row" id={card.id}>
             <div className="prac-text">
                 <h2>{card.title}</h2>
                 <p>{card.text}</p>

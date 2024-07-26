@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import './card.css';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import { useEffect } from 'react';
 
 
 const Card = ({cards, preTitle, pageTitle}) => {
+
+    const scrollWithOffset = (el) => {
+		const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+		const yOffset = -80; 
+		window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+	  };
+
 
     // const [cards] = useState([
     //     {
@@ -48,19 +57,21 @@ const Card = ({cards, preTitle, pageTitle}) => {
                     <div className="cards">
                         {
                             cards.map((card, i) => (
+                                
                                 <div key={i} className="card">
                                     <div className="card-title">
                                         <img src={card.image} alt={`image for ${card.title}`} className="card-image" />
-                                        <h2>{card.title}</h2>
+                                        <HashLink to={`/practiseAreas/#${card.id}`} scroll={scrollWithOffset}><h2>{card.title}</h2></HashLink>
                                     </div>
+                                    {/* <HashLink to={`/practiseAreas/#${card.id}`} scroll={scrollWithOffset}><span>{card.text}</span></HashLink> */}
                                     <span>{card.text}</span>
                                     {/* <div className="read-more">
                                         <a href="#" style = {{fontSize: '15px'}}>Read more &gt;&gt;</a>
                                     </div> */}
                                 </div>
+                               
                             ))
                         }
-
                     </div>
                 </div>
                 {/* </Link> */}

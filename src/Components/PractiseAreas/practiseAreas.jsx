@@ -13,33 +13,39 @@ import trafficlights from '../../assets/trafficLights.JPG'
 
 const PractiseAreas = () => {
     const cards = [
-        {
-            title: 'Sexual Assault',
+        {   
+            id:1,
+            title: ' Sexual Assault',
             text: 'A charge of sexual assault can affect you for the rest of your life. If you are convicted, your education, reputation, and ability to earn a living can be greatly reduced.',
             image: assault 
         },
-        {
-            title: 'Impaired Driving/DUI',
+        {   
+            id:2,
+            title: ' Impaired Driving/DUI',
             text: 'If you have been arrested for impaired driving, you’ll need an experienced criminal defence lawyer to explain your options and fight for the best possible outcome.',
             image: car
         },
-        {
-            title: 'Domestic Assault',
+        {   
+            id:3,
+            title: ' Domestic Assault',
             text: 'Accusations of domestic assault are particularly difficult to handle because they involve intimate partners or family members.',
             image: nopunch
         },
-        {
-            title: 'Assault',
+        {   
+            id:4,
+            title: ' Assault',
             text: 'If you’re considering pleading guilty to a charge of assault, you should know that the resulting conviction can have permanent consequences.',
             image: punch
         },
-        {
-            title: 'Uttering Threats',
+        {   
+            id:5,
+            title: ' Uttering Threats',
             text: 'Threatening someone is a crime under Canadian law. Even if you didn’t mean it or simply spoke in anger, you could still be charged and convicted for uttering threats.',
             image: threat
         },
-        {
-            title: 'Mischief',
+        {   
+            id:6,
+            title: ' Mischief',
             text: 'If you have been accused of willfully damaging someone’s home or possessions with no intent to steal, our defence lawyers offer free online consultations to explain your options.',
             image: hammer
         },

@@ -1,5 +1,5 @@
 .prac-about-container {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     max-width: 100%; /* Ensure container does not exceed the viewport width */
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
