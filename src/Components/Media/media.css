@@ -136,6 +136,11 @@ section{
         flex: 0 0 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
+
+    
+    .mediaCardContainer h1{
+        font-size: 50px;
+    }
 }
 
 

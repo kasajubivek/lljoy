@@ -53,7 +53,7 @@ const Card = ({cards, preTitle, pageTitle}) => {
             <section>
             {/* <Link to="/practiseArea"> */}
                 <div className="cardContainer">
-                    <h1 style={{ fontFamily: '"Noto Serif", serif', fontWeight: 550}}>{preTitle} <span style={{color: 'var(--primaryColor)'}}>{pageTitle}</span></h1>
+                    <h1 style={{ fontFamily: '"Noto Serif", serif', fontWeight: 550}}>{preTitle} <span style={{fontFamily: '"Noto Serif", serif', fontWeight: 550, color: 'var(--primaryColor)'}}>{pageTitle}</span></h1>
                     <div className="cards">
                         {
                             cards.map((card, i) => (
