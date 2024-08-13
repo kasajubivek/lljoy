@@ -1,52 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
 
 :root {
-  /* --primary-color: #1a2c50; */
-  /* --secondary-color: #f4f7fe; */
+  --primary-color: #1a2c50;
+  --primaryColor: #1a2c50; /* Consistent variable naming */
   --secondary-color: #ffffff;
   --text-dark: #333333;
   --text-light: #767268;
   --extra-light: #ffffff;
 }
 
-/* * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-} */
-
-/* body {
-
-  font-family: "Poppins", sans-serif;
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-} */
-
 .section__container {
   width: 100%;
-  height: 100%;
   max-width: 1200px;
   margin: auto;
   text-align: center;
-  /* margin-top: 80px; */
+  padding: 20px; /* Added padding for smaller screens */
 }
 
 .header {
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  text-align: center; /* Center text */
+  align-items: center;
+  text-align: center;
 }
 
 .header p {
   letter-spacing: 2px;
   font-size: 1.5rem;
   font-weight: 500;
-
 }
 
 .header h1 {
@@ -55,30 +37,24 @@
   font-weight: 900;
 }
 
-.testimonials__grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
 .card {
   padding: 2rem;
   display: flex;
-  flex-direction: column; /* Ensure items stack vertically */
-  align-items: center; /* Center items horizontally */
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
   background-color: var(--extra-light);
   border-radius: 5px;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   margin-bottom: 50px;
+  width: 100%; /* Adjusted width for responsiveness */
+  /* max-width: 1000px; */
+  margin: 0 auto 50px;
 }
 
 .card i {
   font-size: 2.5rem;
-  /* color: gold; */
   color: rgb(67, 206, 224);
 }
 
@@ -114,8 +90,9 @@
   color: var(--primary-color);
 }
 
-.footer{
+.footer {
   margin-top: 12px;
+
 }
 
 .footer h4 {
@@ -146,15 +123,82 @@
 }
 
 @media (width < 900px) {
-  .testimonials__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+  .header p {
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .card i {
+    font-size: 2rem;
+  }
+
+  .card .name {
+    width: 50%; /* Increase width for better readability */
+  }
+
+  .footer h4 {
+    font-size: 1.2rem;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+  .footer button {
+    font-size: 0.7rem;
+    padding: 0.8rem 1.5rem;
   }
 }
 
 @media (width < 600px) {
-  .testimonials__grid {
-    grid-template-columns: repeat(1, 1fr);
+  .header p {
+    font-size: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .card i {
+    font-size: 1.8rem;
+  }
+
+  .card .name {
+    width: 70%; /* Further increase width for smaller screens */
+  }
+
+  .footer h4 {
+    font-size: 1rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+
+  .footer button {
+    font-size: 0.7rem;
+    padding: 0.7rem 1.2rem;
   }
 }
 
