@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './contactUs.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faAddressCard, faEnvelope, faInbox } from '@fortawesome/free-solid-svg-icons';
+import emailjs from '@emailjs/browser';
 
 const contactUs = () => {
+    const form = useRef();
     const [inputs, setInputs] = useState({
         firstName: '',
         lastName: '',
         email: '',
         message: ''
     });
+
+    const [submitStatus, setSubmitStatus] = useState('');
 
     const handleFocus = (e) => {
         const { parentNode } = e.target;
@@ -33,9 +37,33 @@ const contactUs = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
         // Handle form submission logic here
+        emailjs
+        .sendForm('service_cc4y9ua', 'template_2b4wvfj', form.current, {
+          publicKey: 'wcynNBPoI2AH-OCjR',
+        })
+        .then(
+          () => {
+            setSubmitStatus('Your message has been sent successfully!');
+            console.log('SUCCESS!');
+            setInputs({
+                firstName: '',
+                lastName: '',
+                email: '',
+                message: ''
+            });
+            setTimeout(() => {
+                setSubmitStatus('');
+            }, 4000);
+            form.current.reset(); 
+          },
+          (error) => {
+            setSubmitStatus('Failed to send the message. Please try again later.')
+            console.log('FAILED...', error.text);
+          },
+        );
         console.log('Form submitted:', inputs);
     };
 
@@ -47,7 +75,7 @@ const contactUs = () => {
                             <div className="contact-heading">
                                 <h1>Contact Us <span>Now!</span></h1>
                             </div>
-                            <form onSubmit={handleSubmit} className="contact-form">
+                            <form ref={form} onSubmit={sendEmail} className="contact-form">
                                 <div className="input-wrap">
                                     <input
                                         className='contact-input'
@@ -115,6 +143,11 @@ const contactUs = () => {
                                     <input type='submit' value="Send message" className='sendBtn'></input>
                                 </div>
                             </form>
+                            {submitStatus && (
+                            <div className="submit-message">
+                               {submitStatus}
+                            </div>
+                            )}
                         </div>
                     </div>
           </div>

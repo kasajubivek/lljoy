@@ -178,6 +178,24 @@ textarea.contact-input ~ .fontAwesomeIcon {
     border: 0px;
 }
 
+.submit-message {
+    margin-top: 1rem;
+    /* padding: 1rem; */
+    /* border-radius: 8px; */
+    font-size: 1rem;
+    color: white;
+    transition: opacity 1s ease-in-out;
+    /* text-align: center; */
+}
+
+.submit-message {
+    color: #28a745; /* Success background color */
+}
+
+.submit-message.error {
+    color: #dc3545; /* Error background color */
+}
+
 /* Media queries for responsiveness */
 /* @media (max-width: 1425px) {
     .two-column-container {
@@ -276,6 +294,14 @@ textarea.contact-input ~ .fontAwesomeIcon {
         padding: 0.7rem 1.1rem; 
         font-size: 0.9rem; 
     }
+
+    .submit-message {
+        text-align: center;
+    }
+
+    .submit-message.error {
+        text-align: center; 
+    }
     
 }
 
@@ -348,6 +374,13 @@ textarea.contact-input ~ .fontAwesomeIcon {
         font-size: 0.9rem; /* Adjust font size */
     }
 
+    .submit-message {
+        text-align: center;
+    }
+
+    .submit-message.error {
+        text-align: center; 
+    }
 
     }
 
@@ -363,4 +396,11 @@ textarea.contact-input ~ .fontAwesomeIcon {
         font-size: 2.5rem; /* Further reduce font size */
     }
     
+    .submit-message {
+        text-align: center;
+    }
+
+    .submit-message.error {
+        text-align: center; 
+    }
     }
