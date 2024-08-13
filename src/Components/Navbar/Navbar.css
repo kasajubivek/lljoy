@@ -77,7 +77,8 @@ nav ul li:hover::after {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 909px) {
+/* @media (max-width: 768px) { */
   .menu-toggle {
     display: block; /* Show toggle button on small screens */
   }

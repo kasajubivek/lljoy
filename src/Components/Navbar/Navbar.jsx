@@ -24,7 +24,8 @@ const Navbar = () => {
         <img src={logo} alt="Logo" className='logo' />
       </HashLink>
       <button className='menu-toggle' onClick={toggleMenu}>
-        {isMenuOpen ? 'Close' : 'Menu'}
+        {/* {isMenuOpen ? 'Close' : 'Menu'} */}
+        {isMenuOpen ? <i className='fas fa-times'></i> : <i className='fas fa-bars'></i>}
       </button>
       <ul className={isMenuOpen ? 'active' : ''}>
         <li><HashLink to={isInPractiseAreasOrMedia ? "/#hero" : "#hero"} onClick={handleLinkClick}>Home</HashLink></li>
