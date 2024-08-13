@@ -117,7 +117,7 @@ nav ul li:hover::after {
     top: 100%; /* Position it below the nav */
     left: 0;
     right: 0;
-    background: #ffffff;
+    background: rgb(241, 241, 241);
   }
 
   nav ul li {
