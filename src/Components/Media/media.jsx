@@ -8,7 +8,10 @@ import protest from '../../assets/protest.jpg'
 import crowd from '../../assets/crowd.JPG'
 import reporter from '../../assets/reporter.jpg'
 import gun from '../../assets/guns2.jpg'
-import rifle from '../../assets/rifle.jpg'
+import lauraCourt from '../../assets/lauracourtimage.JPG'
+import carcrash from '../../assets/carcrash.jpg'
+import denture from '../../assets/denture.jpeg'
+// import rifle from '../../assets/rifle.jpg'
 import { Link } from 'react-router-dom';
 
 const Media = ({ fromHomeMedia }) => {
@@ -17,21 +20,21 @@ const Media = ({ fromHomeMedia }) => {
     const [cards] = useState([
         {
             id:1,
-            title: 'Gun & Weapon Charges in the State of Ontario',
-            text: 'Weapons charges are more serious than people realize because many carry mandatory minimum prison sentences - sometimes even for 1st offenders...',
-            image: rifle  // Update this with the correct path to your image
+            title: 'Defence seeks house arrest for Windsor denturist with 13 sex assault convictions',
+            text: 'Criminal defence lawyer Laura Joy and assistant Crown attorney Tim Kavanagh are shown outside the Superior Court of Justice building in downtown Windsor following the sentencing hearing for former Windsor denturist Mario Mouamer',
+            image: lauraCourt  // Update this with the correct path to your image
         },
         {   
             id:2,
-            title: 'Drug Charges in the State of Ontario',
-            text: 'There are many types of drug offenses ranging from simple possession to trafficking. Whether the arrest came about because of a suspect traffic stop, hand to hand transaction, or warrant based on a confidential informant...',
-            image: table
+            title: 'Windsor driver sentenced to house arrest for 2019 crash that killed her brother',
+            text: 'A Windsor driver has been sentenced to house arrest for a fatal collision that killed her brother in 2019. Court learned the driver was speeding at 100 kilometres per hour on University Avenue',
+            image: carcrash
         },
         {   
             id:3,
-            title: 'Violent Crime Charges in the State of Ontario',
-            text: 'There is no more serious charge with than murder where the penalties range from 20 years to life. But most people don’t realize that the penalties for attempt murder are almost as harsh and are increasing being sought by the...',
-            image: peace
+            title: "'Shocking breach of trust': Former Windsor denturist sent to jail for sexual assault",
+            text: 'A former Windsor denturist is being sent to jail for sexual assault. Mario Mouamer, 47, was previously convicted of 13 counts of sexual assault against ten former patients.',
+            image: denture
         },
         // {
         //     title: 'Domestic Violence Charges in the State of Illinois',

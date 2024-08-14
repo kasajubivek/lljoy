@@ -1,8 +1,9 @@
 .med-about-container {
     /* font-family: Arial, sans-serif; */
+    /* margin-top: 80px; */
 }
 
-.med-hero-image {
+/* .med-hero-image {
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -11,9 +12,31 @@
     justify-content: center;
     position: relative;
     color: white;
+} */
+
+.med-hero-image {
+    /* background-color: #18191b;  */
+    /* background-color: #e6e5e5; */
+    height: 400px;
+    padding-top: 5%;
+    /* padding-bottom: -1px; */
+    /* padding: 0px 0px 0px; */
+    /* height: 50vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000; 
+    position: relative;
+}
+.med-hero-image h1 {
+    font-size: 65px;
+    text-align: center; 
+    padding: 0px 30px; 
+    /* text-decoration: underline;
+    text-decoration-color: var(--primaryColor); */
 }
 
-.med-hero-image::before {
+/* .med-hero-image::before {
     content: '';
     position: absolute;
     top: 0;
@@ -22,19 +45,14 @@
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
-}
+} */
 
-.med-hero-image h1 {
-    position: relative;
-    z-index: 2;
-    font-size: 70px;
-    text-align: center; /* Center text */
-}
+
 
 .med-row {
     display: flex;
     padding: 5px;
-    max-width: 70%;
+    max-width: 50%;
     margin: 0px auto;
 }
 
@@ -75,7 +93,7 @@
 
 .med-column-image {
     width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
+    height: 60vh; /* Maintain aspect ratio */
     margin-bottom: 10px; /* Add space below image */
 }
 

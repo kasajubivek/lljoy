@@ -87,7 +87,7 @@ ul {
 }
 
 .footer-col .social-links a:hover {
-  color: #24262b;
+  color: var(--primaryColor);
   background-color: #ffffff;
 }
 
