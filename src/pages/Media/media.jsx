@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import './media.css';
 import newspaper from '../../assets/newspaper.jpg';
@@ -14,40 +14,22 @@ import ContactUs from '../../Components/ContactUs/contactUs'
 import lauraCourt from '../../assets/lauracourtimage.JPG'
 import carcrash from '../../assets/carcrash.jpg'
 import denture from '../../assets/denture.jpeg'
+import faruqi from '../../assets/faruqi.JPG'
 import { useParams } from 'react-router-dom';
+import CardContext from '../../contexts/CardContext';
 
 const Media = () => {
   const { id } = useParams();
   const cardId = parseInt(id);
   const { pathname } = useLocation();
+  const { cards, cardsTwo } = useContext(CardContext);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [pathname]);
 
-  const [cards] = useState([
-    {
-      id: 1,
-      title: 'Defence seeks house arrest for Windsor denturist with 13 sex assault convictions',
-      text: 'Weapons charges are more serious than people realize because many carry mandatory minimum prison sentences - sometimes even for 1st offenders...',
-      image: rifle
-    },
-    {
-      id: 2,
-      title: 'Windsor driver sentenced to house arrest for 2019 crash that killed her brother',
-      text: 'There are many types of drug offenses ranging from simple possession to trafficking. Whether the arrest came about because of a suspect traffic stop, hand to hand transaction, or warrant based on a confidential informant...',
-      image: table
-    },
-    {
-      id: 3,
-      title: "'Shocking breach of trust': Former Windsor denturist sent to jail for sexual assault",
-      text: 'There is no more serious charge with than murder where the penalties range from 20 years to life. But most people don’t realize that the penalties for attempt murder are almost as harsh and are increasing being sought by the...',
-      image: denture
-    },
-
-  ]);
-
   const selectedCard = cards.find(card => card.id === cardId);
+  const selectedCardTwo = cardsTwo.find(card => card.id === cardId);
 
 
   return (
@@ -64,7 +46,7 @@ const Media = () => {
 
           <div className="med-row med-one-column">
           <div className="med-column">
-            <img src={lauraCourt} alt="Description" className="med-column-image" />
+            <img src={selectedCard.image} alt="Description" className="med-column-image" />
             {/* <h2>Overview</h2> */}
             <p>
               Criminal defence lawyer Laura Joy and assistant Crown attorney Tim Kavanagh are shown outside the Superior Court of Justice building in downtown Windsor following the sentencing hearing on Monday, Jan. 8, 2024, for former Windsor denturist Mario Mouamer, convicted of the sexual assaults of 10 former patients. Photo by Doug Schmidt /Windsor Star
@@ -114,7 +96,7 @@ const Media = () => {
 
           <div className="med-row med-one-column">
           <div className="med-column">
-            <img src={carcrash} alt="Description" className="med-column-image" />
+            <img src={selectedCard.image} alt="Description" className="med-column-image" />
             {/* <h2>Overview</h2> */}
             <p>
             A vehicle is left heavily damaged after crashing into a building in the city's west end. (AM800 / Gord Bacon)
@@ -167,10 +149,10 @@ const Media = () => {
 
           <div className="med-row med-one-column">
           <div className="med-column">
-            <img src={denture} alt="Description" className="med-column-image" />
+            <img src={selectedCard.image} alt="Description" className="med-column-image" />
             {/* <h2>Overview</h2> */}
             <p>
-            Precision-Bite Denture Clinic on Tecumseh Road East in Windsor, Ont., on Wednesday, July 12, 2017. (Alana Hadadean / CTV Windsor).CTV
+            Dr. Pervez Faruqi (Photo courtesy of Chatham-Kent Health Alliance)
             </p>
           </div>
 
@@ -180,45 +162,218 @@ const Media = () => {
         <div className="med-row med-one-column">
           <div className="med-column">
           <span>
-A former Windsor denturist is being sent to jail for sexual assault.<br/><br/>
 
-Mario Mouamer, 47, was previously convicted of 13 counts of sexual assault against ten former patients.<br/><br/>
+A high profile doctor in Chatham, who was accused of assaulting his wife, has had his charges dropped.<br/><br/>
 
-Although the prosecutor wanted a prison term of 42 months, Justice King sentenced Mouamer to a term of 15 months in jail.<br/><br/>
+Dr. Pervez Faruqi's case was resolved with a peace bond in Chatham court on Tuesday. Dr. Faruqi, through his lawyer Laura Joy, promised to keep the peace for 12 months and to follow certain court conditions.<br/><br/>
 
-"It is clear from the evidence in this case that all of the victims in this case have significant emotional impact as a result of these offences," Justice George King said Wednesday during his sentencing in Superior court.<br/><br/>
+The 59-year-old is to have no communication with his wife, is to keep away from her and her residence, and is under a weapons ban.<br/><br/>
 
-During the trial, over 30 days, all ten victims testified about actions by Mouamer during denture fitting appointments.<br/><br/>
+A peace bond is a court order that requires another person to “keep the peace and be of good behaviour” and obey conditions, such as not to contact the complainant or to come near their property.<br/><br/>
 
-Court heard Mouamer would stand behind the patients for a visual inspection.<br/><br/>
+The person who enters into a peace bond does not receive a criminal record. However, if one of the conditions imposed is breached, the person may be charged with a criminal offence.<br/><br/>
 
-"While this was occurring, he would press his groin area into their buttocks," Justice King said Wednesday. "This action was accompanied by a grinding, gyrating or thrusting of his groin area."<br/><br/>
+Joy told the court entering into a peace bond is "no admission of any wrongdoing."<br/><br/>
 
-Justice King gave Mouamer credit for being a middle-aged, first-time offender who outside of the offences in the case had lived a pro-social life.<br/><br/>
+The court heard Faruqi had an argument with his wife over work keys.<br/><br/>
 
-He also noted the offences did not include any touching underneath clothes or physical penetration.<br/><br/>
+Faruqi was charged with an assault that was alleged to have occured on or about August 16, 2023, and assault described as choking, suffocating or strangling between January 1, 2023 and January 16, 2023.<br/><br/>
 
-The judge however couldn't agree with the defence's request for house arrest given the gravity of the offences, the number of complainants and the need for general deterrence.<br/><br/>
+The charges were laid on August 30, 2023 in Chatham, according to the College of Physicians and Surgeons of Ontario.<br/><br/>
 
-"The dominant element of this case is the shocking breach of trust inherent in the commission of these offences," Justice King said. "Mr. Mouamer took advantage of his position of authority and trust as a denturist to advance his own sexual interests and purposes."<br/><br/>
+Dr. Faruqi has been married for 21 years and has three children.<br/><br/>
 
-After the sentence, Mouamer was handcuffed and taken into custody.<br/><br/>
+Dr. Faruqi was Chief of Medical Staff at Chatham-Kent Health Alliance (CKHA), but has been on leave since January 2024.<br/><br/>
 
-"We of course are disappointed that it's real jail, and we were very hopeful for a conditional sentence," defence lawyer Laura Joy told CTV News outside court. "He has aging parents that he is a primary caregiver for, and as his honor (Justice King) indicated, this is a pro-social, mature individual that had a lot of support in the community."<br/><br/>
+CKHA previously said that Dr. Faruqi did not lose his hospital privileges and would continue working as a Paediatrician at CKHA.<br/><br/>
+</span>
 
-During the trial, the court allowed Mouamer to relocate to New Brunswick to care of his parents.<br/><br/>
+          </div>
+        </div>
+          </>
+        )}
 
-Joy asked for house arrest - in part - so he could continue to care for his family while serving his sentence.<br/><br/>
+{selectedCardTwo && selectedCardTwo.id === 4 && (
+          <>
+          <div className="med-hero-image">
+            {/* <img src={selectedCard.image} alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', objectPosition: '0% 45%'}}/> */}
+            <h1>{selectedCardTwo.title}</h1>
+          </div>
 
-She also told CTV News her client will never be a practicing denturist ever again.<br/><br/>
+          <div className="med-row med-one-column">
+          <div className="med-column">
+            <img src={selectedCardTwo.image} alt="Description" className="med-column-image" />
+            {/* <h2>Overview</h2> */}
+            <p>
+            Tammy Hands, left, hugs with David Bondy and lawyer Laura Joy at Superior Court after being found not guilty of extortion and voyeurism Monday June 02, 2014. (NICK BRANCACCIO/The Windsor Star)
+            </p>
+          </div>
 
-"Mr. Mouamer has ascertained his innocence through this trial," Joy said. "He apologized for any hardship he has caused the complainants. It certainly wasn't his intention."<br/><br/>
+        </div>
 
-Some of the victims were in court for today's sentencing.<br/><br/>
+        {/* Content Rows */}
+        <div className="med-row med-one-column">
+          <div className="med-column">
+          <span>
 
-At least one of them scoffed when King sentenced Mouamer to 15 months in jail.<br/><br/>
+          A man and woman accused of using sex tapes to extort $25,000 from a local doctor were acquitted of all charges Monday.<br/><br/>
 
-A court-order publication ban on identifying the victims remains in place permanently, even though the court case is now concluded.<br/>
+Tammy Hands, 49, and David Andrew Bondy, 46, never took the witness stand at their trial. But the doctor who claimed he was their victim did, and presented as an “unreliable” witness with too many inconsistencies in his testimony to warrant a conviction, Superior Court Justice Lynda Templeton ruled.<br/><br/>
+
+Hands and Bondy were charged with extortion stemming from a Jan. 25, 2009 meeting with the doctor at his Tecumseh clinic. The doctor said Bondy claimed to be a private investigator named Doug Sittle hired by the doctor’s wife.<br/><br/>
+
+At the meeting, Bondy had with him a DVD of recordings of Hands and the doctor having sex. Hands had recorded her trysts with the doctor using her cellphone.<br/><br/>
+
+She stood trial on the additional charge of voyeurism.<br/><br/>
+
+But Templeton, having reviewed the videos, said she could not be sure the doctor hadn’t consented to the recordings.<br/><br/>
+</span>
+
+          </div>
+          </div>
+          <div className="med-row med-one-column">
+          <div className="med-column">
+            <img src={selectedCardTwo.imageTwo} alt="Description" className="med-column-image" />
+            {/* <h2>Overview</h2> */}
+            <p>
+            Tammy Hands, left, hugs with David Bondy and lawyer Laura Joy at Superior Court after being found not guilty of extortion and voyeurism Monday June 02, 2014. (NICK BRANCACCIO/The Windsor Star)
+            </p>
+          </div>
+
+        </div>
+        <div className="med-row med-one-column">
+          <div className="med-column">
+          <span>
+
+The defence insisted the doctor preyed on Hands, who was his tenant and emotionally and financially vulnerable. With Bondy’s help, she used the videos to try to get the doctor to leave her alone by threatening to bring their affair to the attention of the licensing body for doctors in Ontario.<br/><br/>
+
+The doctor had treated Hands on occasion. The doctor insisted, however, that Hands was not his patient.<br/><br/>
+
+That, said the judge, was not up to her to decide.<br/><br/>
+
+The defence theory at trial was that the doctor concocted the extortion tale to protect his licence.<br/><br/>
+</span>
+
+          </div>
+        </div>
+          </>
+        )}
+
+{selectedCardTwo && selectedCardTwo.id === 5 && (
+          <>
+          <div className="med-hero-image">
+            {/* <img src={selectedCard.image} alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', objectPosition: '0% 45%'}}/> */}
+            <h1>{selectedCardTwo.title}</h1>
+          </div>
+
+          <div className="med-row med-one-column">
+          <div className="med-column">
+            <img src={selectedCardTwo.image} alt="Description" className="med-column-image" />
+            {/* <h2>Overview</h2> */}
+            <p>
+            Diana Al-Masalkhi, right, is shown Aug. 6, 2015, with her trial lawyer Laura Joy at the Superior Court building in downtown Windsor. Photo by Tyler Brownbridge /Windsor Star
+            </p>
+          </div>
+
+        </div>
+
+        {/* Content Rows */}
+        <div className="med-row med-one-column">
+          <div className="med-column">
+          <span>
+
+          A legal assistant caught up in an RCMP sting and years of subsequent criminal proceedings that ended in the conviction of her immigration lawyer boss has had her $2-million “malicious prosecution” civil suit rejected by the courts.<br/><br/>
+
+“It is abundantly clear the reasonable and probable grounds existed for the arrest of the plaintiff,” Superior Court regional senior Justice Bruce Thomas wrote in a 17-page ruling released Oct. 17 that dismisses the claim.<br/><br/>
+
+Diana Al-Masalkhi was arrested in March 2012 with identical charges to her employer, Sandra Saccucci Zaher, of having fabricated a refugee claim. After lengthy legal proceedings, Al-Masalkhi was exonerated in July 2016. Zaher was convicted and sentenced in 2017 to a year in jail. A subsequent appeal failed earlier this year.<br/><br/>
+
+“Having this hang over her head for as long as it has and having to go to court and defend these types of very serious significant charges has been very hard on her,” Al-Masalkhi’s lawyer Laura Joy told the Star after the 2016 decision.<br/><br/>
+
+Arguing negligent investigation and wrongful arrest by the police authorities, as well as malicious prosecution by the Crown, Al-Masalkhi filed a civil suit against the Attorney General of Canada, claiming $2 million in general and special damages.<br/><br/>
+</span>
+
+          </div>
+          </div>
+          <div className="med-row med-one-column">
+          <div className="med-column">
+            <img src={selectedCardTwo.imageTwo} alt="Description" className="med-column-image" />
+            {/* <h2>Overview</h2> */}
+            <p>
+            Tammy Hands, left, hugs with David Bondy and lawyer Laura Joy at Superior Court after being found not guilty of extortion and voyeurism Monday June 02, 2014. (NICK BRANCACCIO/The Windsor Star)
+            </p>
+          </div>
+
+        </div>
+        <div className="med-row med-one-column">
+          <div className="med-column">
+          <span>
+
+          Al-Masalkhi’s lawyer in the claim argued before Thomas that his client should never have been charged and that she was only being used by the investigators to assist them in securing Zaher’s conviction. In their sting, the RCMP used undercover police officers posing as a refugee claimant feigning a poor grasp of English and an acquaintance helping to translate, and investigators also intercepted communications.<br/><br/>
+
+Following the original 26-day trial, Superior Court Justice Renee Pomerance concluded that, although “some of (her) statements had a potentially incriminating character … (there was) reasonable doubt as to the complicity of Ms. Al-Masalkhi.” The trial judge ruled that the Crown had failed to prove that Al-Masalkhi had knowledge that her employer was preparing a false claim for a client.<br/><br/>
+
+In his ruling released Oct. 17, however, Thomas said that “ultimate acquittal does not affect the sound reasoning applied by investigators regarding her complicity in the fraudulent claim for refugee protection.”<br/><br/>
+</span>
+
+          </div>
+        </div>
+          </>
+        )}
+
+
+{selectedCardTwo && selectedCardTwo.id === 6 && (
+          <>
+          <div className="med-hero-image">
+            {/* <img src={selectedCard.image} alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', objectPosition: '0% 45%'}}/> */}
+            <h1>{selectedCardTwo.title}</h1>
+          </div>
+
+          <div className="med-row med-one-column">
+          <div className="med-column">
+            <img src={selectedCardTwo.image} alt="Description" className="med-column-image" />
+            {/* <h2>Overview</h2> */}
+            <p>
+            File photo of Francesco Vella at his new Walkerville pharmacy on January 15, 2009. (Windsor Star - Tyler Brownbridge)
+            </p>
+          </div>
+
+        </div>
+
+        {/* Content Rows */}
+        <div className="med-row med-one-column">
+          <div className="med-column">
+          <span>
+
+          Pharmacist Francesco Vella was found not guilty Wednesday of sexual assault.<br/><br/>
+
+Ontario Court Justice Gregory Campbell said he did not find some of the complainant’s testimony credible.<br/><br/>
+
+Campbell said, for instance, that he did not believe the complainant’s suggestion that she did not know that a civil suit of almost $2 million was launched on her behalf against Vella.<br/><br/>
+
+The judge also questioned the timing of the civil suit, filed in the 24th month after the alleged incident, which has a two-year limit to be launched — and after the complainant thought she had finished her testimony. She was later called back to the stand.<br/><br/>
+
+The complainant, a 21-year-old pharmacy intern when she claimed the offence took place, was not in court for the ruling.<br/><br/>
+
+“I remain uncertain about the accused’s guilt,” Campbell said. “The charges are hearby dismissed.”<br/><br/>
+
+The complainant alleged that on the afternoon of Jan. 28, 2010, when she was a college student and the store was open for business, she went downstairs at the Olde Walkerville Pharmacy, where she was working as an intern. She said Vella followed her down and then soon forced himself upon her and made her masturbate him.<br/><br/>
+
+Vella, however, testifed that he went down first and that she followed — corroborated by employee Mary Smyk, who was upstairs at the time — and that she sat with him while they both smoked a cigarette. She returned upstairs less than five minutes later, and soon left the pharmacy to visit her mother in the hospital.<br/><br/>
+
+Smyk said the complainant looked happy when she came back upstairs. The complainant later phoned police.<br/><br/>
+
+Campbell said the complainant sometimes seemed inconsistent with details.<br/><br/>
+
+“It was clear to me that the complainant was prepared to fill in the blanks,” he said.<br/><br/>
+
+Vella, 33, hugged supporters in the courtroom and declined to comment after the verdict was read.<br/><br/>
+
+Defence lawyer Laura Joy said her client has maintained his innocence all along and that he simply wants to return to his work as a pharmacist at the apothecary-style Olde Walkerville Pharmacy.<br/><br/>
+
+“Mr. Vella is very happy today and he just wants to get back to work,” Joy said outside court. “He wants to devote himself to his patients and to Walkerville.<br/><br/>
+
+“This has been very hard on my client. This is a young man who takes his role as a professional very seriously. He is very well liked in the community and his patients think very highly of him.”<br/><br/>
 </span>
 
           </div>

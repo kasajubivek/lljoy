@@ -11,7 +11,7 @@ body{
 }
 
 .mediaCardContainer {
-    max-width: 1800px;
+    max-width: 1500px;
     width: 100%;
     margin: 80px auto;
     padding: 0px 20px; 
@@ -38,7 +38,7 @@ section{
 .mediaCards {
      display: flex;
      flex-wrap: wrap;
-     justify-content: space-between;
+     /* justify-content: space-between; */
 }
 
 

@@ -1,69 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useContext  } from 'react';
 
 import './media.css';
-import newspaper from '../../assets/newspaper.jpg'
-import table from '../../assets/table.jpg'
-import peace from '../../assets/peace.jpg'
-import protest from '../../assets/protest.jpg'
-import crowd from '../../assets/crowd.JPG'
-import reporter from '../../assets/reporter.jpg'
-import gun from '../../assets/guns2.jpg'
-import lauraCourt from '../../assets/lauracourtimage.JPG'
-import carcrash from '../../assets/carcrash.jpg'
-import denture from '../../assets/denture.jpeg'
+
 // import rifle from '../../assets/rifle.jpg'
 import { Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css'
+import SwiperCore, { Pagination } from 'swiper'
+import 'swiper/css/pagination';
+import CardContext from '../../contexts/CardContext';
+import { useParams } from 'react-router-dom';
 
 const Media = ({ fromHomeMedia }) => {
-    
+    const { id } = useParams();
+    const cardId = parseInt(id);
 
-    const [cards] = useState([
-        {
-            id:1,
-            title: 'Defence seeks house arrest for Windsor denturist with 13 sex assault convictions',
-            text: 'Criminal defence lawyer Laura Joy and assistant Crown attorney Tim Kavanagh are shown outside the Superior Court of Justice building in downtown Windsor following the sentencing hearing for former Windsor denturist Mario Mouamer',
-            image: lauraCourt  // Update this with the correct path to your image
-        },
-        {   
-            id:2,
-            title: 'Windsor driver sentenced to house arrest for 2019 crash that killed her brother',
-            text: 'A Windsor driver has been sentenced to house arrest for a fatal collision that killed her brother in 2019. Court learned the driver was speeding at 100 kilometres per hour on University Avenue',
-            image: carcrash
-        },
-        {   
-            id:3,
-            title: "'Shocking breach of trust': Former Windsor denturist sent to jail for sexual assault",
-            text: 'A former Windsor denturist is being sent to jail for sexual assault. Mario Mouamer, 47, was previously convicted of 13 counts of sexual assault against ten former patients.',
-            image: denture
-        },
-        // {
-        //     title: 'Domestic Violence Charges in the State of Illinois',
-        //     text: 'A domestic battery can result in jails sentences, community service, court ordered counseling and/or treatment, orders of protection, exclusion from the marital/shared residence, etc. If you are charged with any offense involving domestic violence you need someone to advocate on your behalf. Contact Daniel D. Hinich to for a free consultation right away.',
-        //     image: protest
-        // },
-        // {
-        //     title: 'DUI Defense in the State of Illinois',
-        //     text: 'Being charged with Driving Under the Influence is serious business. It can result in suspension/revocation of your license, fines, fees, classes, SWAP, jail time, loss of employment, etc. The consequences are too serious for anything less than a knowledgeable and experienced defense attorney. Let Daniel D. Hinich use his 25+ years of courtroom experience to fight for you.',
-        //     image: crowd
-        // },
-        // {
-        //     title: 'Burglary & Robbery Defense in the State of Illinois',
-        //     text: 'Residential burglary charges carry a minimum 4 year prison sentence. Armed robbery carries a minimum 6 but that minimum can increase to 21, 26 or 31 if a gun was involved. These are very serious charges that can result in substantial prison sentences so you need to fight back with everything you have. Contact Daniel D. Hinich to mount a serious and aggressive defense to protect your freedom.',
-        //     image: reporter
-        // },
+    const { cards, cardsTwo } = useContext(CardContext);
 
-    ]);
+    const filteredCards = cards.filter(card => card.id !== cardId);
+    const filteredCardsTwo = cardsTwo.filter(card => card.id !== cardId);
 
     return (
         <div>
             <section id="media">
                 <div className="mediaCardContainer">
                 { fromHomeMedia ? ( <h1 style={{ fontFamily: '"Noto Serif", serif', fontWeight: 550}}>Media<span style={{color: 'var(--primaryColor)'}}></span></h1>):
-                (<h1 style={{ fontSize: "30px"}}>Related posts<span style={{color: 'var(--primaryColor)'}}></span></h1>)}
-                   
+                (<h1 style={{ fontSize: "30px"}}>Read more related to Laura<span style={{color: 'var(--primaryColor)'}}></span></h1>)}
+                                       <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+      > 
+                          <SwiperSlide>
                     <div className="mediaCards">
+
                         {
-                            cards.map((card, i) => (
+                            filteredCardsTwo.map((card, i) => (
                                 <div key={i} className="mediaCard">
                                     <Link to={`/media/${card.id}`}><div className="media-img-card">
                                         <img src={card.image} alt={`image for ${card.title}`} className="media-image" />
@@ -77,7 +49,32 @@ const Media = ({ fromHomeMedia }) => {
                                 </div>
                             ))
                         }
+
                     </div>
+                    </SwiperSlide>
+      <SwiperSlide>
+                    <div className="mediaCards">
+
+                        {
+                            filteredCards.map((card, i) => (
+                                <div key={i} className="mediaCard">
+                                    <Link to={`/media/${card.id}`}><div className="media-img-card">
+                                        <img src={card.image} alt={`image for ${card.title}`} className="media-image" />
+                                        {/* <h2>{card.title}</h2> */}
+                                    </div>
+                                    <h2>{card.title}</h2></Link>
+                                    { fromHomeMedia && (<span>{card.text}</span>)}
+                                    <div className="read-more">
+                                        {/* <a href="#" style = {{fontSize: '15px'}}>Read more &gt;&gt;</a> */}
+                                    </div>
+                                </div>
+                            ))
+                        }
+
+                    </div>
+                    </SwiperSlide>
+
+                    </Swiper>
                 </div>
             </section>
         </div>

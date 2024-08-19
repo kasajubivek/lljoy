@@ -19,7 +19,7 @@ import PractiseAreasPage from './pages/PractiseAreas/practiseAreas'
 import Test from './pages/Test/test'
 import Media from './Components/Media/media'
 import Home from './pages/Home/home'
-
+import { CardProvider } from './contexts/CardContext';
 
 
 const App = () => {
@@ -28,6 +28,7 @@ const App = () => {
     <BrowserRouter>
     <div>
       <Navbar/>
+      <CardProvider>
       <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/media/:id" element={<MediaPage />} />
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/test" element={<Test />} />
             {/* Define more routes as needed */}
       </Routes>
+      </CardProvider>
       <Footer/>
     </div>
     </BrowserRouter>
