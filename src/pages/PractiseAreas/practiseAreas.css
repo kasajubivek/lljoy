@@ -13,8 +13,10 @@
 
 .prac-text {
     flex: 1;
-    padding: 10px;
+    padding: 30px;
     min-width: 0; /* Prevent overflow */
+    text-align: justify;
+    margin-right: 10px;
 }
 
 .prac-image {
@@ -69,7 +71,7 @@
     width: 100%; /* Ensure text fits within the viewport */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .prac-hero-image {
         height: 200px; /* Set a fixed height for smaller screens */
     }
@@ -83,6 +85,11 @@
         align-items: flex-start;
     }
 
+    .prac-text {
+        padding: 5px;
+        margin-right: 0;
+    }
+
     .prac-image {
         margin-top: 10px; /* Space between text and image */
     }
@@ -93,12 +100,20 @@
 
     .prac-text p {
         font-size: 18px; /* Adjust font size for smaller screens */
+        padding-top: 5px;
     }
 
     .prac-image img {
         height: auto; /* Ensure image fits within the viewport */
         width: 100%;
     }
+
+
+}
+
+@media (max-width: 768px) {
+
+
 }
 
 .prac-content {

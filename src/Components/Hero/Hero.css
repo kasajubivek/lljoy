@@ -22,29 +22,31 @@
 .hero-text-two {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     gap: 20px; /* Adjust the gap between the elements */
 }
 
 .hero-text h1 {
     font-size: 60px;
     font-weight: 450;
-    display: inline-block;
+    display: inline;
     width: 100%;
     text-align: left;
     background-color: rgba(46, 46, 46, 0.7);
+    padding: 1px 1px;
 }
 
 .innerh1 {
-    font-size: 60px;
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 90px;
     font-weight: 450;
-    display: inline-block;
+    display: inline;
     text-align: left;
-    background-color: rgba(218, 217, 217, 0.7);
+    /* background-color: rgba(218, 217, 217, 0.7); */
     border-right: 5px solid;
     white-space: nowrap;
     overflow: hidden;
-    color: rgb(5, 54, 63);
+    color: rgb(255, 255, 255);
     animation: typing 2s steps(13), cursor .4s step-end infinite alternate;
 }
 
@@ -123,7 +125,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
+@media (max-width: 1236px) {
     .hero-text h1, .innerh1 {
         font-size: 50px;
     }
@@ -164,7 +166,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 576px) {    
     .hero-text h1, .innerh1 {
         font-size: 30px;
     }
@@ -174,8 +176,8 @@
     }
 
     .btnHero {
-        font-size: 14px;
-        padding: 10px 15px;
+        font-size: 13px;
+        padding: 10px 10px;
     }
 
     .google h1 {

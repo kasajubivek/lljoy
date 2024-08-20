@@ -16,7 +16,7 @@ const Hero = () => {
       <div className='hero-text'>
         <motion.h1 {...animationProps} transition={{ duration: 1 }}>A WINDSOR CRIMINAL DEFENSE LAWYER</motion.h1>
         <div className='hero-text-two'>
-          <motion.h2 {...animationProps} className='innerh1'>WE WIN</motion.h2>
+          <motion.h2 {...animationProps} className='innerh1'>WE WIN!</motion.h2>
           <HashLink to="#contactUs">
           <motion.button {...animationProps} transition={{ delay: 1 }} className='btnHero'>
             Contact Us Now

@@ -17,7 +17,7 @@
 .med-hero-image {
     /* background-color: #18191b;  */
     /* background-color: #e6e5e5; */
-    height: 400px;
+    height: 300px;
     padding-top: 5%;
     /* padding-bottom: -1px; */
     /* padding: 0px 0px 0px; */
@@ -27,6 +27,7 @@
     justify-content: center;
     color: #000000; 
     position: relative;
+    background-color: rgba(39, 187, 187, 0.1);
 }
 .med-hero-image h1 {
     font-size: 65px;
