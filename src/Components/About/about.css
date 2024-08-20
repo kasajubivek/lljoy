@@ -15,6 +15,7 @@
 .about-right {
     flex-basis: 56%;
     padding-left: 2%; /* Adding some padding to prevent overlap */
+    text-align: justify;
 }
 
 .about-img {
@@ -65,7 +66,6 @@
 
     .about-left, .about-right {
         flex-basis: 100%; /* Take full width */
-        text-align: center; /* Center text for better readability */
     }
 
     .about-img {
@@ -76,7 +76,6 @@
 
     .about-right {
         padding: 0 5%; /* Add padding on smaller screens */
-        text-align: left;
     }
 
     .about h2 {

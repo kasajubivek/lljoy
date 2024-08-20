@@ -77,7 +77,7 @@ section{
 }
 
 .card span {
-    text-align: left;
+    text-align: justify;
     white-space: pre-wrap; /* This property allows the text to wrap normally. It also respects any line breaks in the source text (although this is not crucial for this specific case) */
 }
 
