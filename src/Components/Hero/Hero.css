@@ -32,7 +32,8 @@
     display: inline;
     width: 100%;
     text-align: left;
-    background-color: rgba(46, 46, 46, 0.7);
+    /* background-color: rgba(46, 46, 46, 0.7); */
+    background-color: rgba(44, 169, 185,0.7);
     padding: 1px 1px;
 }
 
