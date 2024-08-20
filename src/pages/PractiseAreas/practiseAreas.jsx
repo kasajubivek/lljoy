@@ -12,7 +12,7 @@ import checking from '../../assets/checking.JPG';
 import caught from '../../assets/caught.jpg'
 import windowCrack from '../../assets/windowCrack.JPG'
 import punch from '../../assets/punch.jpg'
-import hammer from '../../assets/hammer.webp'
+import hammer from '../../assets/hammer.jpg'
 import MediaComp from '../../Components/Media/media'
 import { useParams } from 'react-router-dom';
 
