@@ -38,7 +38,7 @@
 }
 
 .innerh1 {
-    font-family: "Lucida Handwriting", cursive;
+    /* font-family: "Lucida Handwriting", cursive; */
     font-size: 90px;
     font-weight: 450;
     display: inline;
