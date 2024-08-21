@@ -6,9 +6,9 @@ const about = () => {
   return (
     <div className='about' id="about">
         <div className="about-left">
-            <div className="img-wrapper">
+            {/* <div className="img-wrapper"> */}
                 <img src={laura} className='about-img'/>
-            </div>
+            {/* </div> */}
         </div>
         <div className="about-right">
             <h2>Ms. Laura Joy</h2>
