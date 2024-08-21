@@ -73,11 +73,13 @@
 
 @media (max-width: 1024px) {
     .prac-hero-image {
-        height: 200px; /* Set a fixed height for smaller screens */
+        /* height: 200px;  */
+        max-height: 300px;
     }
     
     .prac-hero-image h1 {
         font-size: 40px; /* Responsive font size */
+        margin-top: 80px;
     }
     
     .prac-row {
