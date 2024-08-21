@@ -15,7 +15,8 @@ ul {
 }
 
 .mainFooter {
-  background-color: #18191b;
+  /* background-color: #18191b; */
+  background-color: rgb(52, 57, 61);
   padding: 70px 0;
   margin-top: 120px;
 }
