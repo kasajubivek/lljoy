@@ -136,7 +136,7 @@ const contactUs = () => {
                                         required
                                     ></textarea>
                                     <label>Message</label>
-                                    <FontAwesomeIcon icon={faInbox} className='fontAwesomeIcon'/>
+                                    {/* <FontAwesomeIcon icon={faInbox} className='fontAwesomeIcon'/> */}
                                 </div>
 
                                 <div className="contact-button">
