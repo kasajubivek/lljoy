@@ -30,7 +30,7 @@ const Footer = () => {
   	 			</ul>
   	 		</div>
   	 		<div className="footer-col">
-  	 			<h4>Practise Areas</h4>
+  	 			<h4>Practice Areas</h4>
 				   <ul>
 					<li><HashLink to="/practiseAreas/#1" scroll={scrollWithOffset}>Sexual Assault</HashLink></li>
 					<li><HashLink to="/practiseAreas/#2" scroll={scrollWithOffset}>Impaired Driving/DUI</HashLink></li>

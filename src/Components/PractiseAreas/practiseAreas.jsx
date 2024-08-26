@@ -53,7 +53,7 @@ const PractiseAreas = () => {
 
     return (
         <div id="practiseAreas">
-            <Card cards={cards} preTitle="Our" pageTitle="Practise Areas"/>
+            <Card cards={cards} preTitle="Our" pageTitle="Practice Areas"/>
         </div>
     );
 };

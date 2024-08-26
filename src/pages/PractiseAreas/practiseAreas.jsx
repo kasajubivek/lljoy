@@ -100,7 +100,7 @@ const PractiseAreas = () => {
           objectPosition: '0% 55%'
         }} 
       />
-          <h1>Practise Areas</h1>
+          <h1>Practice Areas</h1>
         </div>
 
         <div className="prac-content">

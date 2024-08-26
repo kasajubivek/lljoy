@@ -205,3 +205,12 @@
 .swiper-pagination-bullet {
   background-color: var(--primaryColor);
 }
+
+
+@media(max-width: 969px){
+  .card{
+      max-width: 100%;
+  }
+
+
+}

@@ -18,6 +18,11 @@
   /* background-color: white; */
 }
 
+::selection {
+  background-color: var(--primaryColor);
+  color: white; 
+}
+
 /* body{
   background: #F5F5F5;
 } */
