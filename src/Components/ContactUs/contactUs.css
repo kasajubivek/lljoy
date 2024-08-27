@@ -5,7 +5,7 @@
 .two-column-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -216,9 +216,10 @@ textarea.contact-input ~ .fontAwesomeIcon {
 } */
 
 @media (max-width: 1425px) {
-    /* .two-column-container {
-        flex-direction: column;
-    } */
+    .two-column-container {
+        /* flex-direction: column; */
+        margin-top: 10px;
+    }
 
     .left-column, .right-column {
         width: 100%; 
