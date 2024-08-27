@@ -25,7 +25,7 @@ const Media = ({ fromHomeMedia }) => {
             <section id="media">
                 <div className="mediaCardContainer">
                 { fromHomeMedia ? ( <h1 style={{ fontFamily: '"Noto Serif", serif', fontWeight: 550}}>Media<span style={{color: 'var(--primaryColor)'}}></span></h1>):
-                (<h1 style={{ fontSize: "30px"}}>Read more related to Ms. Joy<span style={{color: 'var(--primaryColor)'}}></span></h1>)}
+                (<h1 style={{ fontSize: "30px", textAlign: "left"}}>Read more related to Ms. Joy<span style={{color: 'var(--primaryColor)'}}></span></h1>)}
                                        <Swiper
         spaceBetween={50}
         slidesPerView={1}

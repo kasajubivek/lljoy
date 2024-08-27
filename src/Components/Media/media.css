@@ -31,6 +31,7 @@ section{
     line-height: 60px;
     margin-bottom: 40px;
     padding-left: 1.5%;
+    text-align: center;
 }
 
 
@@ -111,13 +112,11 @@ section{
     text-decoration: none; /* Remove default underline */
     font-weight: bold; /* Make text bold */
     transition: color 0.3s ease;
-    /* Add any additional styling as needed */
 }
 
 .read-more a:hover {
     /* text-decoration: underline;  */
     color: rgb(47, 142, 231);
-    /* Add any additional hover styling as needed */
 }
 
 

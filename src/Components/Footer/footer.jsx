@@ -27,6 +27,7 @@ const Footer = () => {
   	 				{/* <li><a href="#">About Us</a></li> */}
   	 				{/* <li><a href="#">Practise Areas</a></li> */}
   	 				<li><HashLink to="/#media" scroll={scrollWithOffset}>Media</HashLink></li>
+					<li><HashLink to="/#faqs" scroll={scrollWithOffset}>FAQs</HashLink></li>
   	 			</ul>
   	 		</div>
   	 		<div className="footer-col">

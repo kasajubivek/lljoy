@@ -34,6 +34,7 @@ const Navbar = () => {
         <li><HashLink to={isInPractiseAreasOrMedia ? "/#practiseAreas" : "#practiseAreas"} onClick={handleLinkClick}>Practice Areas</HashLink></li>
         <li><HashLink to={isInPractiseAreasOrMedia ? "/#media" : "#media"} onClick={handleLinkClick}>Media</HashLink></li>
         <li><HashLink to={isInPractiseAreasOrMedia ? "/#testimonials" : "#testimonials"} onClick={handleLinkClick}>Testimonials</HashLink></li>
+        <li><HashLink to={isInPractiseAreasOrMedia ? "/#faqs" : "#faqs"} onClick={handleLinkClick}>FAQs</HashLink></li>
         <li><button className='btn'><HashLink to="#contactUs" onClick={handleLinkClick}>Contact Us</HashLink></button></li>
       </ul>
     </nav>

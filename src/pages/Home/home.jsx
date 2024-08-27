@@ -6,6 +6,7 @@ import Media from '../../Components/Media/media'
 import ContactUs from '../../Components/ContactUs/contactUs'
 import Testimonials from '../../Components/Testimonials/testimonials'
 import './home.css';
+import Faq from '../../Components/FAQ/faq'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <PractiseAreas/>
         <Media fromHomeMedia={true}/>
         <Testimonials/>
+        <Faq/>
         <div className="con-div">
         <ContactUs/>
         </div>
