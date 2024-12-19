@@ -32,7 +32,7 @@ const Hero = () => {
           </a>
         </h1>
         <div className="rating">
-          <span>4.3 </span>
+          <span>4.1 </span>
           <span className="stars">
             <span>&#9733;</span>
             <span>&#9733;</span>
